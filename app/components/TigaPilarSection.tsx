@@ -121,13 +121,13 @@ export default function TigaPilarSection() {
             className="flex flex-col items-center"
             style={{ flexShrink: 0, marginTop: `${pillar.marginTop}px` }}
           >
-            {/* Arch card — true arch: fully rounded top, flat bottom */}
+            {/* Arch card — true arch on top, smooth rounded corners at bottom */}
             <div
               className="relative overflow-hidden"
               style={{
                 width: `${pillar.widthPx}px`,
                 height: `${pillar.heightPx}px`,
-                borderRadius: "9999px 9999px 14px 14px",
+                borderRadius: `${pillar.widthPx / 2}px ${pillar.widthPx / 2}px 18px 18px`,
               }}
             >
               <Image
@@ -147,9 +147,9 @@ export default function TigaPilarSection() {
                 }}
               />
 
-              {/* Text — bottom of card */}
+              {/* Text — centered at bottom of card */}
               <div
-                className="absolute left-0 right-0"
+                className="absolute left-0 right-0 text-center"
                 style={{ bottom: "24px", padding: "0 20px" }}
               >
                 <p
