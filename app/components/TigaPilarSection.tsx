@@ -51,12 +51,28 @@ export default function TigaPilarSection() {
         paddingBottom: "140px",
       }}
     >
-      {/* Ambient orange blob — bottom left */}
+      {/* Ambient orange blob — KIRI BAWAH */}
       <div
         className="pointer-events-none absolute"
         style={{
           left: "-100px",
           bottom: "-60px",
+          width: "500px",
+          height: "500px",
+          borderRadius: "50%",
+          background:
+            "radial-gradient(circle, rgba(170,80,10,0.60) 0%, rgba(170,80,10,0.20) 50%, transparent 72%)",
+          filter: "blur(8px)",
+          zIndex: 0,
+        }}
+      />
+
+      {/* Ambient orange blob — KANAN ATAS */}
+      <div
+        className="pointer-events-none absolute"
+        style={{
+          right: "-100px",
+          top: "-60px",
           width: "500px",
           height: "500px",
           borderRadius: "50%",
