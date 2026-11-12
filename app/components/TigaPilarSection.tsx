@@ -2,33 +2,42 @@
 
 import Image from "next/image";
 
+// Diagonal descending left → right:
+// Poktan (kiri) = tallest, KWT (tengah) = medium, Karang Taruna (kanan) = shortest
+// All cards bottom-aligned (align-items: flex-end)
 const pillars = [
   {
     id: "poktan",
     label: "Poktan",
-    image: "/assets/pillar-poktan.jpg",
-    alt: "Anggota Poktan memegang salak di kebun",
+    image: "/assets/section1.webp",
+    alt: "Kebun salak Poktan Ngudi Luhur",
     title: "Giat Ekspor",
     subtitle: "Fokus pada kualitas ekspor global",
-    position: "left", // shorter, lower
+    // tallest
+    heightPx: 460,
+    widthPx: 300,
   },
   {
     id: "kwt",
     label: "KWT",
-    image: "/assets/pillar-kwt.webp",
-    alt: "Produk Wedang Kenthos KWT",
+    image: "/assets/DSC04999.webp",
+    alt: "Produk UMKM dan Olahan KWT",
     title: "UMKM & Olahan",
     subtitle: "Fokus pada Inovasi Hasil Tani",
-    position: "center", // tallest, elevated
+    // medium
+    heightPx: 380,
+    widthPx: 290,
   },
   {
     id: "karangtaruna",
     label: "Karang Taruna",
-    image: "/assets/pillar-agrowisata.webp",
-    alt: "Karang Taruna Agrowisata",
+    image: "/assets/pillar-packinghouse.webp",
+    alt: "Karang Taruna Packing House Desa Kaliurang",
     title: "Agrowisata",
     subtitle: "Fokus pada Pengalaman & Edukasi",
-    position: "right", // medium height
+    // shortest
+    heightPx: 310,
+    widthPx: 280,
   },
 ];
 
@@ -39,148 +48,133 @@ export default function TigaPilarSection() {
       style={{
         backgroundColor: "#1C3829",
         paddingTop: "80px",
-        paddingBottom: "100px",
-        minHeight: "90vh",
+        paddingBottom: "90px",
       }}
     >
-      {/* Ambient blob — bottom left orange glow */}
+      {/* Ambient orange blob — bottom left */}
       <div
         className="pointer-events-none absolute"
         style={{
-          left: "-120px",
-          bottom: "-80px",
-          width: "480px",
-          height: "480px",
+          left: "-100px",
+          bottom: "-60px",
+          width: "500px",
+          height: "500px",
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(180,90,20,0.55) 0%, rgba(180,90,20,0.18) 50%, transparent 75%)",
-          filter: "blur(10px)",
-          zIndex: 0,
-        }}
-      />
-      {/* Ambient blob — top right subtle warm */}
-      <div
-        className="pointer-events-none absolute"
-        style={{
-          right: "-60px",
-          top: "30px",
-          width: "300px",
-          height: "300px",
-          borderRadius: "50%",
-          background:
-            "radial-gradient(circle, rgba(140,70,10,0.25) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(170,80,10,0.60) 0%, rgba(170,80,10,0.20) 50%, transparent 72%)",
           filter: "blur(8px)",
           zIndex: 0,
         }}
       />
 
       {/* Header */}
-      <div className="relative z-10 text-center mb-16 md:mb-20 px-4">
+      <div className="relative z-10 text-center mb-20 px-4">
         <p
-          className="mb-3 text-sm md:text-base font-semibold tracking-widest"
           style={{
             fontFamily: '"BricolageGrotesque", sans-serif',
             color: "#D4622E",
+            fontSize: "14px",
+            fontWeight: 600,
+            letterSpacing: "0.12em",
+            marginBottom: "12px",
           }}
         >
           Ekosistem Kami
         </p>
         <h2
-          className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight"
-          style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+          style={{
+            fontFamily: '"BricolageGrotesque", sans-serif',
+            color: "#ffffff",
+            fontSize: "clamp(40px, 6vw, 72px)",
+            fontWeight: 800,
+            lineHeight: 1.1,
+          }}
         >
           Tiga Pilar Utama
         </h2>
       </div>
 
-      {/* Cards container — staggered layout */}
+      {/* Cards — bottom-aligned, diagonal descending left→right */}
       <div
-        className="relative z-10 flex items-end justify-center px-6 md:px-16 lg:px-24"
-        style={{ gap: "clamp(12px, 2vw, 32px)" }}
+        className="relative z-10 flex items-end justify-center px-8 md:px-16 lg:px-24"
+        style={{ gap: "clamp(16px, 2.5vw, 36px)" }}
       >
-        {pillars.map((pillar) => {
-          const isCenter = pillar.position === "center";
-          const isLeft = pillar.position === "left";
-
-          // Heights: center tallest, right medium, left shortest
-          const cardHeight = isCenter
-            ? "clamp(380px, 48vw, 560px)"
-            : isLeft
-            ? "clamp(300px, 36vw, 440px)"
-            : "clamp(340px, 42vw, 500px)";
-
-          const cardWidth = isCenter
-            ? "clamp(240px, 24vw, 340px)"
-            : "clamp(210px, 21vw, 300px)";
-
-          return (
+        {pillars.map((pillar) => (
+          <div
+            key={pillar.id}
+            className="flex flex-col items-center"
+            style={{ flexShrink: 0 }}
+          >
+            {/* Arch card — true arch: fully rounded top, flat bottom */}
             <div
-              key={pillar.id}
-              className="flex flex-col items-center"
-              style={{ flex: "0 0 auto" }}
+              className="relative overflow-hidden"
+              style={{
+                width: `${pillar.widthPx}px`,
+                height: `${pillar.heightPx}px`,
+                borderRadius: "9999px 9999px 14px 14px",
+              }}
             >
-              {/* Arch card */}
+              <Image
+                src={pillar.image}
+                alt={pillar.alt}
+                fill
+                sizes="(max-width: 768px) 45vw, 22vw"
+                className="object-cover"
+              />
+
+              {/* Gradient overlay — heavy at bottom for text legibility */}
               <div
-                className="relative overflow-hidden"
+                className="absolute inset-0"
                 style={{
-                  width: cardWidth,
-                  height: cardHeight,
-                  // True arch: top is semicircle, bottom is flat rect
-                  borderRadius: "9999px 9999px 16px 16px",
+                  background:
+                    "linear-gradient(to top, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.40) 38%, rgba(0,0,0,0.05) 65%, transparent 100%)",
                 }}
-              >
-                {/* Image */}
-                <Image
-                  src={pillar.image}
-                  alt={pillar.alt}
-                  fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  className="object-cover"
-                  priority={isCenter}
-                />
+              />
 
-                {/* Dark overlay — heavier at bottom */}
-                <div
-                  className="absolute inset-0"
+              {/* Text — bottom of card */}
+              <div
+                className="absolute left-0 right-0"
+                style={{ bottom: "24px", padding: "0 20px" }}
+              >
+                <p
                   style={{
-                    background:
-                      "linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.10) 70%, transparent 100%)",
+                    fontFamily: '"BricolageGrotesque", sans-serif',
+                    color: "#ffffff",
+                    fontWeight: 700,
+                    fontSize: "clamp(13px, 1.2vw, 18px)",
+                    lineHeight: 1.3,
                   }}
-                />
-
-                {/* Text inside card — bottom */}
-                <div
-                  className="absolute left-0 right-0"
-                  style={{ bottom: "28px", padding: "0 20px" }}
                 >
-                  <p
-                    className="text-white font-bold text-base md:text-lg leading-snug"
-                    style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
-                  >
-                    {pillar.title}
-                  </p>
-                  <p
-                    className="text-white/75 text-xs md:text-sm mt-1 leading-relaxed"
-                    style={{ fontFamily: '"Literata", serif' }}
-                  >
-                    {pillar.subtitle}
-                  </p>
-                </div>
+                  {pillar.title}
+                </p>
+                <p
+                  style={{
+                    fontFamily: '"Literata", serif',
+                    color: "rgba(255,255,255,0.75)",
+                    fontSize: "clamp(11px, 0.9vw, 14px)",
+                    marginTop: "4px",
+                    lineHeight: 1.5,
+                  }}
+                >
+                  {pillar.subtitle}
+                </p>
               </div>
-
-              {/* Label below card */}
-              <p
-                className="mt-5 md:mt-6 font-bold text-xl md:text-2xl"
-                style={{
-                  fontFamily: '"BricolageGrotesque", sans-serif',
-                  color: "#D4622E",
-                }}
-              >
-                {pillar.label}
-              </p>
             </div>
-          );
-        })}
+
+            {/* Label below card */}
+            <p
+              style={{
+                fontFamily: '"BricolageGrotesque", sans-serif',
+                color: "#D4622E",
+                fontWeight: 700,
+                fontSize: "clamp(16px, 1.5vw, 24px)",
+                marginTop: "20px",
+              }}
+            >
+              {pillar.label}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );
