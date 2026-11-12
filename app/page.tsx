@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import StatsSection from "./components/StatsSection";
 import AboutSection from "./components/AboutSection";
 import VisionMissionSection from "./components/VisionMissionSection";
+import TigaPilarSection from "./components/TigaPilarSection";
 
 export default function HomePage() {
   return (
@@ -23,6 +24,9 @@ export default function HomePage() {
 
         {/* Part 4: Vision & Mission Section - Visi kami & Misi (Frame 16) */}
         <VisionMissionSection />
+
+        {/* Part 5: Tiga Pilar Utama - Ekosistem Kami */}
+        <TigaPilarSection />
       </main>
     </div>
   );
