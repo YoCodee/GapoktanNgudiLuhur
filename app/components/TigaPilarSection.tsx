@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 
-// Diagonal descending left → right:
-// Poktan (kiri) = tallest, KWT (tengah) = medium, Karang Taruna (kanan) = shortest
-// All cards bottom-aligned (align-items: flex-end)
+// Diagonal staircase left → right:
+// Top AND bottom both descend — cards offset downward with marginTop
+// All cards same height, staggered vertically via marginTop
 const pillars = [
   {
     id: "poktan",
@@ -13,9 +13,9 @@ const pillars = [
     alt: "Kebun salak Poktan Ngudi Luhur",
     title: "Giat Ekspor",
     subtitle: "Fokus pada kualitas ekspor global",
-    // tallest
-    heightPx: 460,
+    heightPx: 420,
     widthPx: 300,
+    marginTop: 0,       // paling tinggi (tidak digeser)
   },
   {
     id: "kwt",
@@ -24,9 +24,9 @@ const pillars = [
     alt: "Produk UMKM dan Olahan KWT",
     title: "UMKM & Olahan",
     subtitle: "Fokus pada Inovasi Hasil Tani",
-    // medium
-    heightPx: 380,
+    heightPx: 420,
     widthPx: 290,
+    marginTop: 90,      // turun satu anak tangga
   },
   {
     id: "karangtaruna",
@@ -35,9 +35,9 @@ const pillars = [
     alt: "Karang Taruna Packing House Desa Kaliurang",
     title: "Agrowisata",
     subtitle: "Fokus pada Pengalaman & Edukasi",
-    // shortest
-    heightPx: 310,
+    heightPx: 420,
     widthPx: 280,
+    marginTop: 180,     // turun dua anak tangga
   },
 ];
 
@@ -48,7 +48,7 @@ export default function TigaPilarSection() {
       style={{
         backgroundColor: "#1C3829",
         paddingTop: "80px",
-        paddingBottom: "90px",
+        paddingBottom: "140px",
       }}
     >
       {/* Ambient orange blob — bottom left */}
@@ -94,16 +94,16 @@ export default function TigaPilarSection() {
         </h2>
       </div>
 
-      {/* Cards — bottom-aligned, diagonal descending left→right */}
+      {/* Cards — staircase: top AND bottom descend left→right via marginTop */}
       <div
-        className="relative z-10 flex items-end justify-center px-8 md:px-16 lg:px-24"
+        className="relative z-10 flex items-start justify-center px-8 md:px-16 lg:px-24"
         style={{ gap: "clamp(16px, 2.5vw, 36px)" }}
       >
         {pillars.map((pillar) => (
           <div
             key={pillar.id}
             className="flex flex-col items-center"
-            style={{ flexShrink: 0 }}
+            style={{ flexShrink: 0, marginTop: `${pillar.marginTop}px` }}
           >
             {/* Arch card — true arch: fully rounded top, flat bottom */}
             <div
