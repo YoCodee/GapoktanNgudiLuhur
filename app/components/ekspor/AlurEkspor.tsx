@@ -33,19 +33,13 @@ export default function AlurEkspor() {
       className="relative w-full overflow-hidden"
       style={{ backgroundColor: "#1C3829", paddingTop: "90px", paddingBottom: "100px" }}
     >
-      {/* Ornamen Sisik Kanan as background texture */}
-      <div
-        className="pointer-events-none absolute right-0 top-0 bottom-0 w-[420px] lg:w-[540px] opacity-25 select-none z-0"
-        style={{
-          maskImage: "linear-gradient(to left, black 60%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to left, black 60%, transparent 100%)",
-        }}
-      >
+      {/* Background Ornament Sisik.png persis di pojok kanan atas merembet ke kiri */}
+      <div className="pointer-events-none absolute right-0 top-0 w-full max-w-[850px] h-[550px] overflow-hidden select-none z-0">
         <Image
-          src="/assets/SisikKanan.png"
+          src="/assets/Sisik.png"
           alt="Ornamen Sisik"
           fill
-          className="object-cover object-left"
+          className="object-contain object-top-right opacity-85"
           priority={false}
         />
       </div>
