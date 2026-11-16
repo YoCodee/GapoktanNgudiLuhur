@@ -44,19 +44,22 @@ export default function Footer() {
               Navigasi
             </p>
             <ul className="space-y-3">
-              {["Beranda", "Giat Ekspor", "UMKM & Olahan", "Agrowisata"].map(
-                (item) => (
-                  <li key={item}>
-                    <a
-                      href="#"
-                      className="text-base text-white/80 transition-colors hover:text-white"
-                      style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
-                    >
-                      {item}
-                    </a>
-                  </li>
-                )
-              )}
+              {[
+                { label: "Beranda", href: "/" },
+                { label: "Giat Ekspor", href: "/ekspor" },
+                { label: "UMKM & Olahan", href: "/#umkm" },
+                { label: "Agrowisata", href: "/#agro-wisata" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    className="text-base text-white/80 transition-colors hover:text-white"
+                    style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 

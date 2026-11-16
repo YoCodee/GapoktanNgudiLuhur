@@ -2,17 +2,18 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { label: "Beranda", href: "#beranda" },
-  { label: "Ekspor", href: "#ekspor" },
-  { label: "UMKM", href: "#umkm" },
-  { label: "Agro Wisata", href: "#agro-wisata" },
+  { label: "Beranda", href: "/" },
+  { label: "Ekspor", href: "/ekspor" },
+  { label: "UMKM", href: "/#umkm" },
+  { label: "Agro Wisata", href: "/#agro-wisata" },
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
-  const [activeTab, setActiveTab] = useState("Beranda");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -35,8 +36,7 @@ export default function Navbar() {
         <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 flex items-center justify-between">
           {/* Logo "Ngudi Luhur" matching Frame 9.png */}
           <Link
-            href="#beranda"
-            onClick={() => setActiveTab("Beranda")}
+            href="/"
             className="text-2xl sm:text-3xl font-medium italic tracking-tight transition-opacity hover:opacity-90"
             style={{
               fontFamily: '"Literata", Georgia, serif',
@@ -48,27 +48,35 @@ export default function Navbar() {
 
           {/* Nav Links */}
           <nav className="hidden md:flex items-center gap-8 lg:gap-10">
-            {navLinks.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                onClick={() => setActiveTab(item.label)}
-                className={`text-lg font-medium transition-colors duration-150 ${
-                  activeTab === item.label
-                    ? "text-[#D4622E]"
-                    : "text-white/85 hover:text-white"
-                }`}
-                style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navLinks.map((item) => {
+              const isActive =
+                item.href === "/"
+                  ? pathname === "/"
+                  : item.href.startsWith("/") && !item.href.includes("#")
+                  ? pathname === item.href
+                  : false;
+
+              return (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className={`text-lg font-medium transition-colors duration-150 ${
+                    isActive
+                      ? "text-[#D4622E]"
+                      : "text-white/85 hover:text-white"
+                  }`}
+                  style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* CTA Button "Hubungi Kami" */}
           <div className="hidden md:block">
             <Link
-              href="#hubungi-kami"
+              href="/#hubungi-kami"
               className="inline-flex items-center justify-center px-6 py-2.5 bg-white text-[#1C3829] text-sm font-semibold rounded-xl shadow hover:bg-neutral-100 active:scale-95 transition-all"
               style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
             >
@@ -120,27 +128,33 @@ export default function Navbar() {
                 Menu Utama
               </p>
               <div className="space-y-4">
-                {navLinks.map((item) => (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    onClick={() => {
-                      setActiveTab(item.label);
-                      setMobileMenuOpen(false);
-                    }}
-                    className={`block text-lg font-medium ${
-                      activeTab === item.label ? "text-[#D4622E]" : "text-white"
-                    }`}
-                    style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                {navLinks.map((item) => {
+                  const isActive =
+                    item.href === "/"
+                      ? pathname === "/"
+                      : item.href.startsWith("/") && !item.href.includes("#")
+                      ? pathname === item.href
+                      : false;
+
+                  return (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`block text-lg font-medium ${
+                        isActive ? "text-[#D4622E]" : "text-white"
+                      }`}
+                      style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
 
             <Link
-              href="#hubungi-kami"
+              href="/#hubungi-kami"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full py-3.5 bg-white text-[#1C3829] font-bold rounded-xl shadow text-center block"
               style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}

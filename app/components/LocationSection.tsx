@@ -10,6 +10,7 @@ export default function LocationSection() {
 
   return (
     <section
+      id="hubungi-kami"
       className="relative w-full"
       style={{ backgroundColor: "#1C3829", paddingTop: "80px", paddingBottom: "0" }}
     >
