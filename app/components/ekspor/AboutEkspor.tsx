@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const partners = [
   {
     tag: "MITRA DISTRIBUSI NASIONAL",
@@ -12,10 +14,26 @@ const partners = [
 ];
 
 const certifications = [
-  { icon: "🛡️", title: "Karantina Pertanian", desc: "Lolos pemeriksaan BBKP/BKIPM" },
-  { icon: "🌿", title: "Sertifikasi Organik", desc: "300 hektar lahan tersertifikasi" },
-  { icon: "📦", title: "Standar Grading Ekspor", desc: "Grade A/B sesuai permintaan buyer" },
-  { icon: "🌡️", title: "Reefer Container", desc: "Pengiriman suhu terkontrol" },
+  {
+    icon: "/assets/icons/Vectorperlindungan.png",
+    title: "Karantina Pertanian",
+    desc: "Lolos pemeriksaan BBKP/BKIPM",
+  },
+  {
+    icon: "/assets/icons/Vector.png",
+    title: "Sertifikasi Organik",
+    desc: "300 hektar lahan tersertifikasi",
+  },
+  {
+    icon: "/assets/icons/Ekspor.png",
+    title: "Standar Grading Ekspor",
+    desc: "Grade A/B sesuai permintaan buyer",
+  },
+  {
+    icon: "/assets/icons/Temperatur.png",
+    title: "Reefer Container",
+    desc: "Pengiriman suhu terkontrol",
+  },
 ];
 
 export default function AboutEkspor() {
@@ -29,7 +47,7 @@ export default function AboutEkspor() {
         <div className="mb-12 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
           <div>
             <p
-              className="mb-3 text-sm font-semibold"
+              className="mb-3 text-sm font-semibold tracking-wide"
               style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
             >
               Kepercayaan &amp; Legalitas
@@ -54,15 +72,15 @@ export default function AboutEkspor() {
         </div>
 
         {/* Partner cards */}
-        <div className="mb-14 grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div className="mb-14 grid grid-cols-1 gap-6 md:grid-cols-2">
           {partners.map((p) => (
             <div
               key={p.name}
-              className="rounded-2xl border p-6"
-              style={{ borderColor: "#e5e7eb", backgroundColor: "#ffffff" }}
+              className="rounded-2xl border p-7 shadow-sm transition-shadow hover:shadow-md"
+              style={{ borderColor: "#eceeed", backgroundColor: "#ffffff" }}
             >
               <p
-                className="mb-2 text-xs font-bold tracking-widest"
+                className="mb-2 text-xs font-bold tracking-widest uppercase"
                 style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
               >
                 {p.tag}
@@ -74,7 +92,7 @@ export default function AboutEkspor() {
                 {p.name}
               </h3>
               <p
-                className="text-sm leading-relaxed text-gray-500"
+                className="text-sm leading-relaxed text-gray-600"
                 style={{ fontFamily: '"Literata", serif' }}
               >
                 {p.desc}
@@ -83,15 +101,23 @@ export default function AboutEkspor() {
           ))}
         </div>
 
-        {/* Certifications row */}
+        {/* Certifications row with real icons */}
         <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
           {certifications.map((c, i) => (
             <div
               key={i}
-              className="border-l-2 pl-4"
+              className="border-l-2 pl-4 flex flex-col justify-start"
               style={{ borderColor: "#e5e7eb" }}
             >
-              <span className="mb-2 block text-2xl">{c.icon}</span>
+              <div className="mb-3 relative w-6 h-6 flex items-center">
+                <Image
+                  src={c.icon}
+                  alt={c.title}
+                  width={24}
+                  height={24}
+                  className="object-contain"
+                />
+              </div>
               <p
                 className="mb-1 font-bold text-[#1C3829]"
                 style={{ fontFamily: '"BricolageGrotesque", sans-serif', fontSize: "15px" }}
@@ -99,7 +125,7 @@ export default function AboutEkspor() {
                 {c.title}
               </p>
               <p
-                className="text-xs text-gray-500"
+                className="text-xs text-gray-500 leading-relaxed"
                 style={{ fontFamily: '"Literata", serif' }}
               >
                 {c.desc}

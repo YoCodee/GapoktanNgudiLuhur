@@ -9,19 +9,23 @@ const stats = [
 
 export default function HeroEkspor() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden">
-      {/* Background image */}
+    <section className="relative min-h-screen w-full overflow-hidden bg-[#18281f]">
+      {/* Background image matching Hero-Ekspor.png / Frame 24 */}
       <Image
-        src="/assets/DSC04999.webp"
-        alt="Packing House Ekspor Salak Nglumut"
+        src="/assets/Frame 24.png"
+        alt="Aktivitas Sortir Ekspor Salak Nglumut"
         fill
-        className="object-cover"
+        className="object-cover object-center"
         priority
       />
-      {/* Dark overlay */}
+
+      {/* Deep dark green overlay matching the design mockup */}
       <div
-        className="absolute inset-0"
-        style={{ background: "linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.40) 60%, rgba(0,0,0,0.20) 100%)" }}
+        className="absolute inset-0 z-0"
+        style={{
+          background:
+            "linear-gradient(105deg, rgba(16, 35, 23, 0.90) 0%, rgba(20, 42, 28, 0.82) 45%, rgba(18, 38, 25, 0.72) 100%)",
+        }}
       />
 
       {/* Content */}
@@ -53,7 +57,7 @@ export default function HeroEkspor() {
               href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20menghubungi%20Tim%20Ekspor"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-full bg-white px-8 py-3 text-sm font-bold text-[#1C3829] transition-all hover:bg-white/90"
+              className="inline-block rounded-full bg-white px-8 py-3.5 text-sm font-bold text-[#1C3829] shadow-md transition-all hover:bg-neutral-100 hover:shadow-lg active:scale-95"
               style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
             >
               Hubungi Tim Ekspor
@@ -62,20 +66,20 @@ export default function HeroEkspor() {
 
           {/* Right — stats card */}
           <div
-            className="w-full rounded-2xl bg-white p-8 lg:w-auto lg:min-w-[280px]"
-            style={{ boxShadow: "0 8px 40px rgba(0,0,0,0.25)" }}
+            className="w-full rounded-2xl bg-white p-8 lg:w-[280px] lg:flex-shrink-0"
+            style={{ boxShadow: "0 12px 40px rgba(0,0,0,0.35)" }}
           >
             {stats.map((stat, i) => (
               <div key={i}>
-                {i > 0 && <div style={{ height: "1px", backgroundColor: "#e5e7eb", margin: "16px 0" }} />}
+                {i > 0 && <div style={{ height: "1px", backgroundColor: "#f0f0f0", margin: "18px 0" }} />}
                 <p
-                  className="text-4xl font-extrabold"
+                  className="text-4xl font-extrabold leading-none"
                   style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
                 >
                   {stat.value}
                 </p>
                 <p
-                  className="mt-1 text-xs font-bold tracking-widest text-gray-500"
+                  className="mt-2 text-xs font-bold tracking-widest text-[#1C3829]/70"
                   style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
                 >
                   {stat.unit}
