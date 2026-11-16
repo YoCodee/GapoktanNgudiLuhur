@@ -47,7 +47,7 @@ export default function Footer() {
               {[
                 { label: "Beranda", href: "/" },
                 { label: "Giat Ekspor", href: "/ekspor" },
-                { label: "UMKM & Olahan", href: "/#umkm" },
+                { label: "UMKM & Olahan", href: "/umkm" },
                 { label: "Agrowisata", href: "/#agro-wisata" },
               ].map((item) => (
                 <li key={item.label}>
