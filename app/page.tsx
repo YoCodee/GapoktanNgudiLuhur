@@ -4,6 +4,10 @@ import StatsSection from "./components/StatsSection";
 import AboutSection from "./components/AboutSection";
 import VisionMissionSection from "./components/VisionMissionSection";
 import TigaPilarSection from "./components/TigaPilarSection";
+import DocumentasiSection from "./components/DocumentasiSection";
+import LiputanSection from "./components/LiputanSection";
+import LocationSection from "./components/LocationSection";
+import Footer from "./components/Footer";
 
 export default function HomePage() {
   return (
@@ -11,7 +15,7 @@ export default function HomePage() {
       {/* Navigation Header */}
       <Navbar />
 
-      {/* Main Content exactly matching public/design/full/Desktop - 3.png */}
+      {/* Main Content */}
       <main>
         {/* Part 1: Hero Section (Frame 13) */}
         <HeroSection />
@@ -25,9 +29,21 @@ export default function HomePage() {
         {/* Part 4: Vision & Mission Section - Visi kami & Misi (Frame 16) */}
         <VisionMissionSection />
 
-        {/* Part 5: Tiga Pilar Utama - Ekosistem Kami */}
+        {/* Part 5: Tiga Pilar Utama - Ekosistem Kami (Frame 17) */}
         <TigaPilarSection />
+
+        {/* Part 6: Dokumentasi Kegiatan - Living the Movement (Frame 19) */}
+        <DocumentasiSection />
+
+        {/* Part 7: Liputan Media - Kabar dari Ngudi Luhur */}
+        <LiputanSection />
+
+        {/* Part 8: Lokasi & Kontak - Siap Bermitra atau Berkunjung? */}
+        <LocationSection />
       </main>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
