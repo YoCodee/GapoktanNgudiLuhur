@@ -1,0 +1,113 @@
+const partners = [
+  {
+    tag: "MITRA DISTRIBUSI NASIONAL",
+    name: "PT Sewu Segar Nusantara",
+    desc: "Mitra distribusi nasional — Sunpride. Salah satu perusahaan agribisnis buah segar terbesar di Indonesia.",
+  },
+  {
+    tag: "PROGRAM PEMBERDAYAAN",
+    name: "Desa Sejahtera Astra",
+    desc: "Program pemberdayaan petani unggulan dari PT Astra International. Ngudi Luhur menjadi unit percontohan nasional.",
+  },
+];
+
+const certifications = [
+  { icon: "🛡️", title: "Karantina Pertanian", desc: "Lolos pemeriksaan BBKP/BKIPM" },
+  { icon: "🌿", title: "Sertifikasi Organik", desc: "300 hektar lahan tersertifikasi" },
+  { icon: "📦", title: "Standar Grading Ekspor", desc: "Grade A/B sesuai permintaan buyer" },
+  { icon: "🌡️", title: "Reefer Container", desc: "Pengiriman suhu terkontrol" },
+];
+
+export default function AboutEkspor() {
+  return (
+    <section
+      className="w-full"
+      style={{ backgroundColor: "#FAF9F6", paddingTop: "80px", paddingBottom: "80px" }}
+    >
+      <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
+        {/* Top — 2 col header */}
+        <div className="mb-12 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <p
+              className="mb-3 text-sm font-semibold"
+              style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+            >
+              Kepercayaan &amp; Legalitas
+            </p>
+            <h2
+              className="text-4xl font-extrabold leading-tight text-[#1C3829] md:text-5xl"
+              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+            >
+              Dipercaya oleh Mitra Kelas Nasional
+            </h2>
+          </div>
+          <div className="flex items-center">
+            <p
+              className="text-base leading-relaxed text-gray-600 md:text-lg"
+              style={{ fontFamily: '"Literata", serif' }}
+            >
+              Produk kami telah melewati kurasi ketat dan diterima oleh mitra distribusi nasional
+              terkemuka, menjadikan Gapoktan Ngudi Luhur salah satu pemasok salak premium paling
+              dipercaya di Indonesia.
+            </p>
+          </div>
+        </div>
+
+        {/* Partner cards */}
+        <div className="mb-14 grid grid-cols-1 gap-4 md:grid-cols-2">
+          {partners.map((p) => (
+            <div
+              key={p.name}
+              className="rounded-2xl border p-6"
+              style={{ borderColor: "#e5e7eb", backgroundColor: "#ffffff" }}
+            >
+              <p
+                className="mb-2 text-xs font-bold tracking-widest"
+                style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+              >
+                {p.tag}
+              </p>
+              <h3
+                className="mb-3 text-2xl font-bold text-[#1C3829]"
+                style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              >
+                {p.name}
+              </h3>
+              <p
+                className="text-sm leading-relaxed text-gray-500"
+                style={{ fontFamily: '"Literata", serif' }}
+              >
+                {p.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Certifications row */}
+        <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
+          {certifications.map((c, i) => (
+            <div
+              key={i}
+              className="border-l-2 pl-4"
+              style={{ borderColor: "#e5e7eb" }}
+            >
+              <span className="mb-2 block text-2xl">{c.icon}</span>
+              <p
+                className="mb-1 font-bold text-[#1C3829]"
+                style={{ fontFamily: '"BricolageGrotesque", sans-serif', fontSize: "15px" }}
+              >
+                {c.title}
+              </p>
+              <p
+                className="text-xs text-gray-500"
+                style={{ fontFamily: '"Literata", serif' }}
+              >
+                {c.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
