@@ -48,13 +48,13 @@ export default function AboutEkspor() {
           <div>
             <p
               className="mb-3 text-sm font-semibold tracking-wide"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
             >
               Kepercayaan &amp; Legalitas
             </p>
             <h2
               className="text-4xl font-extrabold leading-tight text-[#1C3829] md:text-5xl"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Dipercaya oleh Mitra Kelas Nasional
             </h2>
@@ -62,7 +62,7 @@ export default function AboutEkspor() {
           <div className="flex items-center">
             <p
               className="text-base leading-relaxed text-gray-600 md:text-lg"
-              style={{ fontFamily: '"Literata", serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Produk kami telah melewati kurasi ketat dan diterima oleh mitra distribusi nasional
               terkemuka, menjadikan Gapoktan Ngudi Luhur salah satu pemasok salak premium paling
@@ -81,19 +81,19 @@ export default function AboutEkspor() {
             >
               <p
                 className="mb-2 text-xs font-bold tracking-widest uppercase"
-                style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+                style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
               >
                 {p.tag}
               </p>
               <h3
                 className="mb-3 text-2xl font-bold text-[#1C3829]"
-                style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
               >
                 {p.name}
               </h3>
               <p
                 className="text-sm leading-relaxed text-gray-600"
-                style={{ fontFamily: '"Literata", serif' }}
+                style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
               >
                 {p.desc}
               </p>
@@ -120,13 +120,13 @@ export default function AboutEkspor() {
               </div>
               <p
                 className="mb-1 font-bold text-[#1C3829]"
-                style={{ fontFamily: '"BricolageGrotesque", sans-serif', fontSize: "15px" }}
+                style={{ fontFamily: '"PlusJakartaSans", sans-serif', fontSize: "15px" }}
               >
                 {c.title}
               </p>
               <p
                 className="text-xs text-gray-500 leading-relaxed"
-                style={{ fontFamily: '"Literata", serif' }}
+                style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
               >
                 {c.desc}
               </p>

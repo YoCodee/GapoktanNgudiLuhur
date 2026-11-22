@@ -10,14 +10,14 @@ export default function StatsSection() {
           <div className="lg:col-span-5">
             <p
               className="text-[#D4622E] font-semibold text-base mb-5"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Dampak &amp; Capaian
             </p>
 
             <h2
               className="text-[#1C3829] text-4xl sm:text-5xl lg:text-[54px] font-extrabold leading-[1.1] tracking-tight mb-8"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Angka yang
               <br />
@@ -30,7 +30,7 @@ export default function StatsSection() {
 
             <p
               className="text-[#D4622E] font-medium text-base"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Sejak 2017
             </p>
@@ -45,19 +45,19 @@ export default function StatsSection() {
                 <div className="py-7 sm:py-9 pr-6 sm:pr-10 border-r border-[#A69F94]/50">
                   <p
                     className="text-[#1C3829] text-base font-medium mb-3"
-                    style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                   >
                     Global
                   </p>
                   <p
                     className="text-[#D4622E] text-5xl sm:text-6xl lg:text-[72px] font-extrabold leading-none mb-3"
-                    style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                   >
                     800
                   </p>
                   <p
                     className="text-[#1C3829] text-sm sm:text-base"
-                    style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                   >
                     + Hektar Lahan
                   </p>
@@ -67,19 +67,19 @@ export default function StatsSection() {
                 <div className="py-7 sm:py-9 pl-6 sm:pl-10">
                   <p
                     className="text-[#1C3829] text-base font-medium mb-3"
-                    style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                   >
                     China
                   </p>
                   <p
                     className="text-[#D4622E] text-5xl sm:text-6xl lg:text-[72px] font-extrabold leading-none mb-3"
-                    style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                   >
                     700
                   </p>
                   <p
                     className="text-[#1C3829] text-sm sm:text-base"
-                    style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                   >
                     + Ton Ekspor
                   </p>
@@ -92,19 +92,19 @@ export default function StatsSection() {
                 <div className="py-7 sm:py-9 pr-6 sm:pr-10 border-r border-[#A69F94]/50">
                   <p
                     className="text-[#1C3829] text-base font-medium mb-3"
-                    style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                   >
                     Volume
                   </p>
                   <p
                     className="text-[#D4622E] text-5xl sm:text-6xl lg:text-[72px] font-extrabold leading-none mb-3"
-                    style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                   >
                     50
                   </p>
                   <p
                     className="text-[#1C3829] text-sm sm:text-base"
-                    style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                   >
                     30-50 Ton / Minggu
                   </p>
@@ -114,19 +114,19 @@ export default function StatsSection() {
                 <div className="py-7 sm:py-9 pl-6 sm:pl-10">
                   <p
                     className="text-[#1C3829] text-base font-medium mb-3"
-                    style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                   >
                     Pasar
                   </p>
                   <p
                     className="text-[#D4622E] text-5xl sm:text-6xl lg:text-[72px] font-extrabold leading-none mb-3"
-                    style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                   >
                     4
                   </p>
                   <p
                     className="text-[#1C3829] text-sm sm:text-base"
-                    style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                   >
                     + Negara Tujuan
                   </p>

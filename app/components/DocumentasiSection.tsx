@@ -61,19 +61,19 @@ export default function DocumentasiSection() {
         <div className="mb-12 text-center">
           <p
             className="mb-3 text-sm font-semibold tracking-widest"
-            style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
           >
             Dokumentasi Kegiatan
           </p>
           <h2
             className="mb-5 text-4xl font-extrabold md:text-5xl lg:text-6xl"
-            style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#1C3829" }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#1C3829" }}
           >
             Living the Movement
           </h2>
           <p
             className="mx-auto max-w-2xl text-base leading-relaxed md:text-lg"
-            style={{ fontFamily: '"Literata", serif', color: "#4a5a4e" }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#4a5a4e" }}
           >
             Dari kebun ke kontainer, dari dapur KWT ke meja buyer,{" "}
             <br className="hidden md:block" />
@@ -106,13 +106,13 @@ export default function DocumentasiSection() {
               <div className="absolute bottom-0 left-0 p-6">
                 <p
                   className="mb-1 text-xs font-medium text-white/70"
-                  style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                 >
                   {largeCard.category}
                 </p>
                 <p
                   className="text-xl font-bold text-white md:text-2xl"
-                  style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                 >
                   {largeCard.title}
                 </p>
@@ -144,13 +144,13 @@ export default function DocumentasiSection() {
               <div className="absolute bottom-0 left-0 p-4">
                 <p
                   className="mb-0.5 text-xs font-medium text-white/70"
-                  style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                 >
                   {card.category}
                 </p>
                 <p
                   className="text-base font-bold text-white md:text-lg"
-                  style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                 >
                   {card.title}
                 </p>

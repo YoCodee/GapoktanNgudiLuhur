@@ -25,19 +25,19 @@ export default function JangkauanEkspor() {
         <div className="mb-14 text-center">
           <p
             className="mb-3 text-sm font-semibold tracking-widest"
-            style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
           >
             Jangkauan Ekspor
           </p>
           <h2
             className="mb-5 text-5xl font-extrabold leading-tight text-[#1C3829] md:text-6xl"
-            style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
           >
             Menjangkau Pasar di 4 Penjuru Dunia
           </h2>
           <p
             className="mx-auto max-w-2xl text-base leading-relaxed text-gray-500 md:text-lg"
-            style={{ fontFamily: '"Literata", serif' }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
           >
             Dengan pengiriman rutin 30–50 ton per minggu, produk kami telah menjangkau pasar Asia
             dan Eropa — dan terus berkembang.
@@ -50,13 +50,13 @@ export default function JangkauanEkspor() {
           <div>
             <span
               className="text-5xl font-extrabold"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
             >
               ±700
             </span>
             <span
               className="ml-3 text-2xl font-bold text-[#1C3829]"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Ton
             </span>
@@ -64,13 +64,13 @@ export default function JangkauanEkspor() {
           <div className="max-w-sm">
             <p
               className="mb-1 text-sm font-semibold text-[#1C3829]"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               diekspor ke China, Januari–Oktober 2025
             </p>
             <p
               className="text-xs leading-relaxed text-gray-500"
-              style={{ fontFamily: '"Literata", serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Pengiriman rutin 30–50 ton per minggu ke China, Kamboja, Eropa, dan Timor Leste.
             </p>
@@ -84,7 +84,7 @@ export default function JangkauanEkspor() {
           <div>
             <p
               className="mb-4 text-base font-bold"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
             >
               Pasar Aktif Saat Ini
             </p>
@@ -98,13 +98,13 @@ export default function JangkauanEkspor() {
                   <div>
                     <p
                       className="font-bold text-[#1C3829]"
-                      style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                      style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                     >
                       {m.name}
                     </p>
                     <p
                       className="text-xs text-gray-500"
-                      style={{ fontFamily: '"Literata", serif' }}
+                      style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                     >
                       {m.desc}
                     </p>
@@ -119,7 +119,7 @@ export default function JangkauanEkspor() {
           <div>
             <p
               className="mb-4 text-base font-bold"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
             >
               Target Pasar Baru
             </p>
@@ -133,13 +133,13 @@ export default function JangkauanEkspor() {
                   <div>
                     <p
                       className="font-bold text-[#1C3829]"
-                      style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                      style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                     >
                       {m.name}
                     </p>
                     <p
                       className="text-xs text-gray-500"
-                      style={{ fontFamily: '"Literata", serif' }}
+                      style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                     >
                       {m.desc}
                     </p>

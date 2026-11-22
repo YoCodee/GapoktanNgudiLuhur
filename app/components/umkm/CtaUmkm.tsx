@@ -10,20 +10,19 @@ export default function CtaUmkm() {
 
   return (
     <section className="relative w-full overflow-hidden bg-[#1C3829] py-24 lg:py-32">
-      {/* Sisik.png Ornament on right side matching Umkm-aklhir.png */}
-      <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-0 w-[500px] lg:w-[750px] overflow-hidden opacity-45">
-        <Image
-          src="/assets/Sisik.png"
-          alt="Ornamen Sisik Salak"
-          fill
-          className="object-cover object-left"
-        />
-      </div>
+      {/* SisikKanan.png Ornament on right side (full height, partial width) */}
+      <div
+        className="pointer-events-none absolute right-0 top-0 bottom-0 z-0 h-full w-[55%] sm:w-[60%] md:w-full md:max-w-[750px] bg-repeat-y bg-right-top opacity-75 md:opacity-85 select-none"
+        style={{
+          backgroundImage: "url('/assets/SisikKanan.png')",
+          backgroundSize: "100% auto",
+        }}
+      />
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center md:px-12">
         <h2
           className="mb-6 text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl"
-          style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+          style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
         >
           Siap Membawa Pulang
           <br />
@@ -31,7 +30,7 @@ export default function CtaUmkm() {
         </h2>
         <p
           className="mx-auto mb-10 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg"
-          style={{ fontFamily: '"Literata", serif' }}
+          style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
         >
           Dapatkan produk olahan salak premium langsung dari dapur KWT
           Ngudi Luhur. Segar, higienis, dan penuh kasih tangan petani Srumbung.
@@ -42,7 +41,7 @@ export default function CtaUmkm() {
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-bold text-[#1C3829] shadow-xl transition-all hover:bg-neutral-100 hover:shadow-2xl active:scale-95"
-          style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+          style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
         >
           {/* WhatsApp Icon */}
           <svg

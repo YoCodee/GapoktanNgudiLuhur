@@ -9,13 +9,13 @@ export default function TentangUmkm() {
           <div>
             <p
               className="mb-3 text-sm font-bold uppercase tracking-wider"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
             >
               TENTANG KWT KAMI
             </p>
             <h2
               className="mb-6 text-3xl font-extrabold leading-tight text-[#1C3829] sm:text-4xl lg:text-5xl"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Motor Ekonomi
               <br />
@@ -23,7 +23,7 @@ export default function TentangUmkm() {
             </h2>
             <div
               className="space-y-4 text-base leading-relaxed text-gray-700"
-              style={{ fontFamily: '"Literata", serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               <p>
                 Di balik setiap produk olahan Ngudi Luhur, ada tangan-tangan
@@ -45,13 +45,13 @@ export default function TentangUmkm() {
               <div className="flex items-start gap-3">
                 <span
                   className="select-none text-3xl font-bold leading-none"
-                  style={{ color: "#D4622E", fontFamily: '"Literata", serif' }}
+                  style={{ color: "#D4622E", fontFamily: '"PlusJakartaSans", sans-serif' }}
                 >
                   “
                 </span>
                 <p
                   className="text-lg leading-snug text-[#1C3829] sm:text-xl"
-                  style={{ fontFamily: '"Literata", serif' }}
+                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                 >
                   Transformasi salak segar menjadi produk bernilai tinggi,
                   dikelola oleh kelompok wanita tani sebagai motor ekonomi kreatif desa.

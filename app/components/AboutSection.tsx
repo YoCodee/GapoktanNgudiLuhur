@@ -5,22 +5,31 @@ export default function AboutSection() {
   return (
     <section
       id="tentang"
-      className="w-full min-h-[860px] flex items-center bg-[#1C3829] py-16 lg:py-24"
+      className="relative w-full min-h-[860px] flex items-center overflow-hidden bg-[#1C3829] py-16 lg:py-24"
     >
-      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
+      {/* Ornamen SisikKanan.png di sisi kanan (full height, partial width) */}
+      <div
+        className="pointer-events-none absolute right-0 top-0 bottom-0 z-0 h-full w-[55%] sm:w-[60%] md:w-full md:max-w-[950px] lg:max-w-[1050px] bg-repeat-y bg-right-top opacity-75 md:opacity-85 select-none"
+        style={{
+          backgroundImage: "url('/assets/SisikKanan.png')",
+          backgroundSize: "100% auto",
+        }}
+      />
+
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column (6 cols) */}
           <div className="lg:col-span-6">
             <p
               className="text-[#D4622E] font-semibold text-base mb-4"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Tentang Kami
             </p>
 
             <h2
               className="text-white text-4xl sm:text-5xl lg:text-[54px] font-extrabold leading-[1.1] tracking-tight mb-8"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Integrasi Lokal,
               <br />
@@ -29,7 +38,7 @@ export default function AboutSection() {
 
             <div
               className="space-y-6 text-white/80 text-[15px] sm:text-base leading-relaxed max-w-[560px]"
-              style={{ fontFamily: '"Literata", Georgia, serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               <p>
                 Berlokasi di kawasan vulkanik subur lereng barat Gunung Merapi
@@ -59,7 +68,7 @@ export default function AboutSection() {
               <Link
                 href="#ekspor"
                 className="inline-flex items-center justify-center px-8 py-3.5 bg-white text-[#1C3829] text-base font-semibold rounded-full shadow-md hover:bg-neutral-100 active:scale-[0.98] transition-all duration-200 cursor-pointer"
-                style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
               >
                 Lihat Alur Ekspor
               </Link>
@@ -89,19 +98,19 @@ export default function AboutSection() {
               >
                 <p
                   className="text-[#D4622E] text-4xl sm:text-[44px] font-extrabold leading-none mb-2"
-                  style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                 >
                   800+
                 </p>
                 <p
                   className="text-[#1C3829] text-xs sm:text-[13px] font-bold tracking-wider uppercase mb-1"
-                  style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                 >
                   HEKTAR LAHAN
                 </p>
                 <p
                   className="text-[#55645A] text-xs sm:text-sm font-medium"
-                  style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                 >
                   Tersertifikasi Aktif
                 </p>

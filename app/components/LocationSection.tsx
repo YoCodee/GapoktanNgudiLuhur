@@ -18,19 +18,19 @@ export default function LocationSection() {
       <div className="mx-auto max-w-4xl px-6 pb-12 text-center md:px-12">
         <p
           className="mb-4 text-sm font-semibold tracking-widest"
-          style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+          style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
         >
           Hubungi Kami
         </p>
         <h2
           className="mb-6 text-4xl font-extrabold text-white md:text-5xl lg:text-6xl"
-          style={{ fontFamily: '"BricolageGrotesque", sans-serif', lineHeight: 1.1 }}
+          style={{ fontFamily: '"PlusJakartaSans", sans-serif', lineHeight: 1.1 }}
         >
           Siap Bermitra atau Berkunjung?
         </h2>
         <p
           className="mx-auto mb-10 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg"
-          style={{ fontFamily: '"Literata", serif' }}
+          style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
         >
           Kami terbuka untuk kemitraan ekspor, pembelian produk olahan UMKM, maupun kunjungan
           edukasi Agrowisata di lereng Merapi.
@@ -42,7 +42,7 @@ export default function LocationSection() {
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block rounded-full border border-white/40 bg-white px-8 py-3 text-sm font-semibold text-[#1C3829] transition-all hover:bg-white/90"
-          style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+          style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
         >
           Hubungi via WhatsApp
         </a>
@@ -68,13 +68,13 @@ export default function LocationSection() {
         >
           <p
             className="mb-1 font-bold text-[#1C3829]"
-            style={{ fontFamily: '"BricolageGrotesque", sans-serif', fontSize: "15px" }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif', fontSize: "15px" }}
           >
             Gapoktan Ngudi Luhur
           </p>
           <p
             className="text-xs leading-relaxed text-gray-500"
-            style={{ fontFamily: '"Literata", serif' }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
           >
             Jrakah, Kaliurang, Kec. Srumbung,
             <br />
@@ -88,7 +88,7 @@ export default function LocationSection() {
           target="_blank"
           rel="noopener noreferrer"
           className="absolute bottom-5 right-5 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm font-semibold text-[#1C3829] shadow-lg transition-all hover:bg-gray-50"
-          style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+          style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
         >
           Buka di Google Maps
         </a>

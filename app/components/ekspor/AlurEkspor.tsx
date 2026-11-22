@@ -33,35 +33,33 @@ export default function AlurEkspor() {
       className="relative w-full overflow-hidden"
       style={{ backgroundColor: "#1C3829", paddingTop: "90px", paddingBottom: "100px" }}
     >
-      {/* Background Ornament Sisik.png persis di pojok kanan atas merembet ke kiri */}
-      <div className="pointer-events-none absolute right-0 top-0 w-full max-w-[850px] h-[550px] overflow-hidden select-none z-0">
-        <Image
-          src="/assets/Sisik.png"
-          alt="Ornamen Sisik"
-          fill
-          className="object-contain object-top-right opacity-85"
-          priority={false}
-        />
-      </div>
+      {/* Background Ornament SisikKanan.png di sisi kanan (full height, partial width) */}
+      <div
+        className="pointer-events-none absolute right-0 top-0 bottom-0 z-0 h-full w-[55%] sm:w-[60%] md:w-full md:max-w-[950px] bg-repeat-y bg-right-top opacity-75 md:opacity-85 select-none"
+        style={{
+          backgroundImage: "url('/assets/SisikKanan.png')",
+          backgroundSize: "100% auto",
+        }}
+      />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
         {/* Header */}
         <div className="mb-14 text-center">
           <p
             className="mb-3 text-sm font-semibold tracking-widest uppercase"
-            style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
           >
             Alur Operasional
           </p>
           <h2
             className="mb-5 text-4xl md:text-5xl lg:text-6xl font-extrabold text-white"
-            style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
           >
             Dari Pohon hingga Kontainer
           </h2>
           <p
             className="mx-auto max-w-2xl text-base md:text-lg leading-relaxed text-white/70"
-            style={{ fontFamily: '"Literata", serif' }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
           >
             Setiap tahap dikendalikan dengan standar ketat untuk memastikan kualitas premium sampai
             ke tangan pembeli internasional.
@@ -104,7 +102,7 @@ export default function AlurEkspor() {
                 {/* Step number */}
                 <p
                   className="mb-2 text-3xl font-extrabold leading-none"
-                  style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+                  style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
                 >
                   {step.no}
                 </p>
@@ -112,7 +110,7 @@ export default function AlurEkspor() {
                 {/* Title */}
                 <h3
                   className="mb-3 text-lg md:text-xl font-bold text-white leading-snug"
-                  style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                 >
                   {step.title}
                 </h3>
@@ -120,7 +118,7 @@ export default function AlurEkspor() {
                 {/* Description */}
                 <p
                   className="text-sm leading-relaxed text-white/70 mt-auto"
-                  style={{ fontFamily: '"Literata", serif' }}
+                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                 >
                   {step.desc}
                 </p>

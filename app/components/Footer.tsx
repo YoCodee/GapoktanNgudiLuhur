@@ -17,19 +17,19 @@ export default function Footer() {
           <div>
             <h3
               className="mb-3 text-3xl font-normal text-white"
-              style={{ fontFamily: '"Literata", serif', fontStyle: "italic" }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif', fontStyle: "italic" }}
             >
               Ngudi Luhur
             </h3>
             <p
               className="mb-2 text-sm font-semibold text-white/80"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Pusat Agribisnis Salak Nglumut Premium
             </p>
             <p
               className="text-sm text-white/50"
-              style={{ fontFamily: '"Literata", serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Srumbung, Kabupaten Magelang, Jawa Tengah
             </p>
@@ -39,7 +39,7 @@ export default function Footer() {
           <div>
             <p
               className="mb-5 text-xs font-bold uppercase tracking-widest text-white/40"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Navigasi
             </p>
@@ -48,13 +48,13 @@ export default function Footer() {
                 { label: "Beranda", href: "/" },
                 { label: "Giat Ekspor", href: "/ekspor" },
                 { label: "UMKM & Olahan", href: "/umkm" },
-                { label: "Agrowisata", href: "/#agro-wisata" },
+                { label: "Agrowisata", href: "/agro-wisata" },
               ].map((item) => (
                 <li key={item.label}>
                   <a
                     href={item.href}
                     className="text-base text-white/80 transition-colors hover:text-white"
-                    style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                   >
                     {item.label}
                   </a>
@@ -67,13 +67,13 @@ export default function Footer() {
           <div>
             <p
               className="mb-5 text-xs font-bold uppercase tracking-widest text-white/40"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Kontak &amp; Lokasi
             </p>
             <p
               className="mb-4 text-sm leading-relaxed text-white/70"
-              style={{ fontFamily: '"Literata", serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               99V8+5QH, Jrakah, Kaliurang, Kec. Srumbung,
               <br />
@@ -85,7 +85,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-sm font-semibold transition-opacity hover:opacity-70"
-                style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+                style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
               >
                 Buka di Google Maps →
               </a>
@@ -94,7 +94,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-sm font-semibold transition-opacity hover:opacity-70"
-                style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+                style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
               >
                 WhatsApp Gapoktan →
               </a>
@@ -111,13 +111,13 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between gap-2 md:flex-row">
           <p
             className="text-xs text-white/40"
-            style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
           >
             © {currentYear} Gapoktan Ngudi Luhur, Srumbung, Magelang
           </p>
           <p
             className="text-xs text-white/40"
-            style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
           >
             Salak Nglumut Premium · Sejak 2017
           </p>

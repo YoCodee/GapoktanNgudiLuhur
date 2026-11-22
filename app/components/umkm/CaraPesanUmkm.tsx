@@ -24,13 +24,13 @@ export default function CaraPesanUmkm() {
         <div className="mx-auto max-w-2xl text-center">
           <p
             className="mb-3 text-sm font-bold uppercase tracking-wider"
-            style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
           >
             CARA PESAN
           </p>
           <h2
             className="mb-6 text-3xl font-extrabold leading-tight text-[#1C3829] sm:text-4xl lg:text-5xl"
-            style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
           >
             Mudah, Cepat,
             <br />
@@ -46,20 +46,20 @@ export default function CaraPesanUmkm() {
                 className="mb-5 flex h-14 w-14 items-center justify-center rounded-full text-xl font-extrabold text-white shadow-sm"
                 style={{
                   backgroundColor: "#D4622E",
-                  fontFamily: '"BricolageGrotesque", sans-serif',
+                  fontFamily: '"PlusJakartaSans", sans-serif',
                 }}
               >
                 {step.num}
               </div>
               <h3
                 className="mb-2 text-lg font-bold text-[#1C3829]"
-                style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
               >
                 {step.title}
               </h3>
               <p
                 className="text-sm leading-relaxed text-gray-600"
-                style={{ fontFamily: '"Literata", serif' }}
+                style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
               >
                 {step.desc}
               </p>
@@ -71,7 +71,7 @@ export default function CaraPesanUmkm() {
         <div className="mt-16 text-center">
           <p
             className="text-xs text-gray-500 sm:text-sm"
-            style={{ fontFamily: '"Literata", serif' }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
           >
             Melayani pemesanan seluruh Indonesia, pengiriman via JNE, J&amp;T, dan SiCepat
           </p>

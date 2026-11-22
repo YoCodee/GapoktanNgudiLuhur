@@ -44,42 +44,17 @@ const pillars = [
 export default function TigaPilarSection() {
   return (
     <section
-      className="relative w-full overflow-hidden"
+      className="relative w-full overflow-hidden py-16 md:py-20 lg:pt-[80px] lg:pb-[140px]"
       style={{
         backgroundColor: "#1C3829",
-        paddingTop: "80px",
-        paddingBottom: "140px",
       }}
     >
-      {/* Ambient orange blob — KIRI BAWAH */}
+      {/* Ornamen SisikKanan.png di sisi kanan saja (full height, partial width) */}
       <div
-        className="pointer-events-none absolute"
+        className="pointer-events-none absolute right-0 top-0 bottom-0 z-0 h-full w-[55%] sm:w-[60%] md:w-full md:max-w-[850px] bg-repeat-y bg-right-top opacity-75 md:opacity-85 select-none"
         style={{
-          left: "-100px",
-          bottom: "-60px",
-          width: "500px",
-          height: "500px",
-          borderRadius: "50%",
-          background:
-            "radial-gradient(circle, rgba(170,80,10,0.60) 0%, rgba(170,80,10,0.20) 50%, transparent 72%)",
-          filter: "blur(8px)",
-          zIndex: 0,
-        }}
-      />
-
-      {/* Ambient orange blob — KANAN ATAS */}
-      <div
-        className="pointer-events-none absolute"
-        style={{
-          right: "-100px",
-          top: "-60px",
-          width: "500px",
-          height: "500px",
-          borderRadius: "50%",
-          background:
-            "radial-gradient(circle, rgba(170,80,10,0.60) 0%, rgba(170,80,10,0.20) 50%, transparent 72%)",
-          filter: "blur(8px)",
-          zIndex: 0,
+          backgroundImage: "url('/assets/SisikKanan.png')",
+          backgroundSize: "100% auto",
         }}
       />
 
@@ -87,7 +62,7 @@ export default function TigaPilarSection() {
       <div className="relative z-10 text-center mb-20 px-4">
         <p
           style={{
-            fontFamily: '"BricolageGrotesque", sans-serif',
+            fontFamily: '"PlusJakartaSans", sans-serif',
             color: "#D4622E",
             fontSize: "14px",
             fontWeight: 600,
@@ -99,7 +74,7 @@ export default function TigaPilarSection() {
         </p>
         <h2
           style={{
-            fontFamily: '"BricolageGrotesque", sans-serif',
+            fontFamily: '"PlusJakartaSans", sans-serif',
             color: "#ffffff",
             fontSize: "clamp(40px, 6vw, 72px)",
             fontWeight: 800,
@@ -110,31 +85,31 @@ export default function TigaPilarSection() {
         </h2>
       </div>
 
-      {/* Cards — staircase: top AND bottom descend left→right via marginTop */}
+      {/* Cards — stacked cleanly on mobile, staircase left→right on desktop (lg+) */}
       <div
-        className="relative z-10 flex items-start justify-center px-8 md:px-16 lg:px-24"
-        style={{ gap: "clamp(16px, 2.5vw, 36px)" }}
+        className="relative z-10 flex flex-col items-center gap-12 px-6 lg:flex-row lg:items-start lg:justify-center lg:gap-[clamp(16px,2.5vw,36px)] lg:px-24"
       >
         {pillars.map((pillar) => (
           <div
             key={pillar.id}
-            className="flex flex-col items-center"
-            style={{ flexShrink: 0, marginTop: `${pillar.marginTop}px` }}
+            className="flex flex-col items-center shrink-0 mt-0 lg:mt-[var(--pillar-mt)]"
+            style={
+              {
+                "--pillar-mt": `${pillar.marginTop}px`,
+                "--pillar-w": `${pillar.widthPx}px`,
+                "--pillar-h": `${pillar.heightPx}px`,
+              } as React.CSSProperties
+            }
           >
             {/* Arch card — true arch on top, smooth rounded corners at bottom */}
             <div
-              className="relative overflow-hidden"
-              style={{
-                width: `${pillar.widthPx}px`,
-                height: `${pillar.heightPx}px`,
-                borderRadius: `${pillar.widthPx / 2}px ${pillar.widthPx / 2}px 18px 18px`,
-              }}
+              className="relative overflow-hidden w-[270px] h-[370px] sm:w-[300px] sm:h-[410px] lg:w-[var(--pillar-w)] lg:h-[var(--pillar-h)] rounded-t-full rounded-b-[18px]"
             >
               <Image
                 src={pillar.image}
                 alt={pillar.alt}
                 fill
-                sizes="(max-width: 768px) 45vw, 22vw"
+                sizes="(max-width: 1024px) 300px, 22vw"
                 className="object-cover"
               />
 
@@ -153,24 +128,14 @@ export default function TigaPilarSection() {
                 style={{ bottom: "24px", padding: "0 20px" }}
               >
                 <p
-                  style={{
-                    fontFamily: '"BricolageGrotesque", sans-serif',
-                    color: "#ffffff",
-                    fontWeight: 700,
-                    fontSize: "clamp(13px, 1.2vw, 18px)",
-                    lineHeight: 1.3,
-                  }}
+                  className="text-white font-bold text-lg lg:text-[18px] leading-snug"
+                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                 >
                   {pillar.title}
                 </p>
                 <p
-                  style={{
-                    fontFamily: '"Literata", serif',
-                    color: "rgba(255,255,255,0.75)",
-                    fontSize: "clamp(11px, 0.9vw, 14px)",
-                    marginTop: "4px",
-                    lineHeight: 1.5,
-                  }}
+                  className="text-white/75 text-xs lg:text-[13px] mt-1 leading-relaxed"
+                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                 >
                   {pillar.subtitle}
                 </p>
@@ -179,12 +144,10 @@ export default function TigaPilarSection() {
 
             {/* Label below card */}
             <p
+              className="mt-4 lg:mt-5 font-bold text-xl lg:text-2xl"
               style={{
-                fontFamily: '"BricolageGrotesque", sans-serif',
+                fontFamily: '"PlusJakartaSans", sans-serif',
                 color: "#D4622E",
-                fontWeight: 700,
-                fontSize: "clamp(16px, 1.5vw, 24px)",
-                marginTop: "20px",
               }}
             >
               {pillar.label}

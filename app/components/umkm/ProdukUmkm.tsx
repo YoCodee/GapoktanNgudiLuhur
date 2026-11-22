@@ -96,13 +96,13 @@ export default function ProdukUmkm() {
         <div className="mx-auto max-w-2xl text-center">
           <p
             className="mb-3 text-sm font-bold uppercase tracking-wider"
-            style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
           >
             PRODUK KAMI
           </p>
           <h2
             className="mb-4 text-3xl font-extrabold leading-tight text-[#1C3829] sm:text-4xl lg:text-5xl"
-            style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
           >
             Olahan Salak Terbaik
             <br />
@@ -110,7 +110,7 @@ export default function ProdukUmkm() {
           </h2>
           <p
             className="text-base text-gray-700"
-            style={{ fontFamily: '"Literata", serif' }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
           >
             Setiap produk dibuat dari bahan baku Salak Nglumut pilihan — segar,
             organik, dan diproses dengan standar higienitas tinggi.
@@ -127,7 +127,7 @@ export default function ProdukUmkm() {
                   ? "bg-[#1C3829] text-white shadow-sm"
                   : "text-gray-700 hover:text-black hover:bg-gray-50"
               }`}
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Semua
             </button>
@@ -138,7 +138,7 @@ export default function ProdukUmkm() {
                   ? "bg-[#1C3829] text-white shadow-sm"
                   : "text-gray-700 hover:text-black hover:bg-gray-50"
               }`}
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Makanan Ringan
             </button>
@@ -149,7 +149,7 @@ export default function ProdukUmkm() {
                   ? "bg-[#1C3829] text-white shadow-sm"
                   : "text-gray-700 hover:text-black hover:bg-gray-50"
               }`}
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Minuman
             </button>
@@ -184,14 +184,14 @@ export default function ProdukUmkm() {
                   <div>
                     <h3
                       className="mb-1 text-lg font-bold text-[#1C3829]"
-                      style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                      style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                     >
                       {item.name}
                     </h3>
                     <p
                       className="mb-2 text-sm font-bold"
                       style={{
-                        fontFamily: '"BricolageGrotesque", sans-serif',
+                        fontFamily: '"PlusJakartaSans", sans-serif',
                         color: "#D4622E",
                       }}
                     >
@@ -199,7 +199,7 @@ export default function ProdukUmkm() {
                     </p>
                     <p
                       className="mb-5 text-xs leading-relaxed text-gray-600 line-clamp-2"
-                      style={{ fontFamily: '"Literata", serif' }}
+                      style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                     >
                       {item.description}
                     </p>
@@ -212,7 +212,7 @@ export default function ProdukUmkm() {
                     rel="noopener noreferrer"
                     className="flex w-full items-center justify-center gap-2 rounded-full py-2.5 text-xs font-bold text-white shadow-xs transition-colors hover:opacity-95 active:scale-98"
                     style={{
-                      fontFamily: '"BricolageGrotesque", sans-serif',
+                      fontFamily: '"PlusJakartaSans", sans-serif',
                       backgroundColor: "#D4622E",
                     }}
                   >

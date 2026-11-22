@@ -10,15 +10,14 @@ export default function UnggulanUmkm() {
 
   return (
     <section className="relative w-full overflow-hidden bg-[#1C3829] py-20 lg:py-28">
-      {/* Decorative Sisik Pattern in background matching Unggulan-umkm.png */}
-      <div className="pointer-events-none absolute -right-20 top-0 bottom-0 z-0 w-[600px] lg:w-[850px] overflow-hidden opacity-35">
-        <Image
-          src="/assets/SisikKanan.png"
-          alt="Ornamen Sisik Salak"
-          fill
-          className="object-cover object-left"
-        />
-      </div>
+      {/* Decorative Sisik Pattern in background (full height, partial width) */}
+      <div
+        className="pointer-events-none absolute right-0 top-0 bottom-0 z-0 h-full w-[55%] sm:w-[60%] md:w-full md:max-w-[850px] lg:max-w-[1000px] xl:max-w-[1100px] bg-repeat-y bg-right-top opacity-75 md:opacity-85 select-none"
+        style={{
+          backgroundImage: "url('/assets/SisikKanan.png')",
+          backgroundSize: "100% auto",
+        }}
+      />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
@@ -26,26 +25,26 @@ export default function UnggulanUmkm() {
           <div>
             <p
               className="mb-3 text-sm font-bold uppercase tracking-wider"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
             >
               PRODUK INOVATIF UNGGULAN
             </p>
             <h2
               className="mb-2 text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Kopi Biji Salak
             </h2>
             <p
               className="mb-6 text-xl italic text-white/90 sm:text-2xl"
-              style={{ fontFamily: '"Literata", serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Inovasi Rasa dari Lereng Merapi
             </p>
 
             <p
               className="mb-6 text-base leading-relaxed text-white/80"
-              style={{ fontFamily: '"Literata", serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Siapa sangka biji salak — yang selama ini terbuang sebagai limbah —
               bisa menjadi secangkir kopi yang aromatik dan memikat? KWT Ngudi
@@ -56,7 +55,7 @@ export default function UnggulanUmkm() {
 
             <p
               className="mb-8 text-sm font-semibold text-white/90"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Dari limbah, lahir keistimewaan.
             </p>
@@ -65,12 +64,15 @@ export default function UnggulanUmkm() {
               href={waUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-[#1C3829] shadow-md transition-all hover:bg-neutral-100 hover:shadow-lg active:scale-95"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              className="inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 text-sm font-bold text-white shadow-md transition-all hover:brightness-110 hover:shadow-lg active:scale-95"
+              style={{
+                fontFamily: '"PlusJakartaSans", sans-serif',
+                backgroundColor: "#D4622E",
+              }}
             >
               {/* Coffee Cup Icon */}
               <svg
-                className="h-4 w-4 text-[#1C3829]"
+                className="h-4 w-4 text-white"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"

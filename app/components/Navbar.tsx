@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Beranda", href: "/" },
   { label: "Ekspor", href: "/ekspor" },
   { label: "UMKM", href: "/umkm" },
-  { label: "Agro Wisata", href: "/#agro-wisata" },
+  { label: "Agro Wisata", href: "/agro-wisata" },
 ];
 
 export default function Navbar() {
@@ -39,7 +39,7 @@ export default function Navbar() {
             href="/"
             className="text-2xl sm:text-3xl font-medium italic tracking-tight transition-opacity hover:opacity-90"
             style={{
-              fontFamily: '"Literata", Georgia, serif',
+              fontFamily: '"PlusJakartaSans", sans-serif',
               color: "#D4622E",
             }}
           >
@@ -65,7 +65,7 @@ export default function Navbar() {
                       ? "text-[#D4622E]"
                       : "text-white/85 hover:text-white"
                   }`}
-                  style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                 >
                   {item.label}
                 </Link>
@@ -78,7 +78,7 @@ export default function Navbar() {
             <Link
               href="/#hubungi-kami"
               className="inline-flex items-center justify-center px-6 py-2.5 bg-white text-[#1C3829] text-sm font-semibold rounded-xl shadow hover:bg-neutral-100 active:scale-95 transition-all"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Hubungi Kami
             </Link>
@@ -123,7 +123,7 @@ export default function Navbar() {
             <div className="space-y-6">
               <p
                 className="text-xs uppercase tracking-widest text-[#D4622E] font-bold"
-                style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
               >
                 Menu Utama
               </p>
@@ -144,7 +144,7 @@ export default function Navbar() {
                       className={`block text-lg font-medium ${
                         isActive ? "text-[#D4622E]" : "text-white"
                       }`}
-                      style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                      style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                     >
                       {item.label}
                     </Link>
@@ -157,7 +157,7 @@ export default function Navbar() {
               href="/#hubungi-kami"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full py-3.5 bg-white text-[#1C3829] font-bold rounded-xl shadow text-center block"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Hubungi Kami
             </Link>

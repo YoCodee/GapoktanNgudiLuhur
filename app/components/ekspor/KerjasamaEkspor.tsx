@@ -9,33 +9,31 @@ export default function KerjasamaEkspor() {
       className="relative w-full overflow-hidden"
       style={{ backgroundColor: "#1C3829", paddingTop: "90px", paddingBottom: "100px" }}
     >
-      {/* Background Ornament Sisik.png persis di pojok kanan merembet ke kiri */}
-      <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-full max-w-[850px] overflow-hidden select-none z-0">
-        <Image
-          src="/assets/Sisik.png"
-          alt="Ornamen Sisik"
-          fill
-          className="object-cover object-right opacity-85"
-          priority={false}
-        />
-      </div>
+      {/* Background Ornament SisikKanan.png di sisi kanan (full height, partial width) */}
+      <div
+        className="pointer-events-none absolute right-0 top-0 bottom-0 z-0 h-full w-[55%] sm:w-[60%] md:w-full md:max-w-[950px] bg-repeat-y bg-right-top opacity-75 md:opacity-85 select-none"
+        style={{
+          backgroundImage: "url('/assets/SisikKanan.png')",
+          backgroundSize: "100% auto",
+        }}
+      />
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center md:px-12">
         <p
           className="mb-4 text-sm font-semibold tracking-widest uppercase"
-          style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+          style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
         >
           Kerjasama
         </p>
         <h2
           className="mb-6 text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
-          style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+          style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
         >
           Tertarik Bermitra bersama Kami?
         </h2>
         <p
           className="mx-auto mb-10 max-w-2xl text-base md:text-lg leading-relaxed text-white/70"
-          style={{ fontFamily: '"Literata", serif' }}
+          style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
         >
           Kami terbuka untuk kerjasama dengan eksportir, distributor, buyer internasional, dan
           investor yang ingin mengembangkan rantai pasok salak premium bersama komunitas petani
@@ -48,7 +46,7 @@ export default function KerjasamaEkspor() {
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-3.5 text-sm md:text-base font-bold text-[#1C3829] shadow-lg transition-all duration-200 hover:bg-neutral-100 hover:shadow-xl hover:scale-105 active:scale-95"
-          style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+          style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
         >
           {/* WhatsApp SVG Icon */}
           <svg

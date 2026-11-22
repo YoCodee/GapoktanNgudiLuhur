@@ -16,14 +16,14 @@ export default function VisionMissionSection() {
           <div className="lg:col-span-5">
             <p
               className="text-[#D4622E] font-semibold text-base mb-5"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Visi kami
             </p>
 
             <h2
               className="text-[#1C3829] text-4xl sm:text-5xl lg:text-[52px] font-extrabold leading-[1.1] tracking-tight mb-8"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Dibangun di Atas
               <br />
@@ -34,7 +34,7 @@ export default function VisionMissionSection() {
 
             <p
               className="text-[#3A463E] text-base sm:text-lg leading-relaxed max-w-[480px]"
-              style={{ fontFamily: '"Literata", Georgia, serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Terwujudnya ekosistem pertanian salak di Kabupaten Magelang yang
               berkelanjutan dan berdaya saing global melalui sinergi petani,
@@ -46,7 +46,7 @@ export default function VisionMissionSection() {
           <div className="lg:col-span-7">
             <p
               className="text-[#D4622E] font-semibold text-base mb-5"
-              style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Misi
             </p>
@@ -64,7 +64,7 @@ export default function VisionMissionSection() {
 
                   <p
                     className="text-[#1C3829] text-base sm:text-lg font-semibold leading-relaxed"
-                    style={{ fontFamily: '"BricolageGrotesque", sans-serif' }}
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
                   >
                     {mission}
                   </p>

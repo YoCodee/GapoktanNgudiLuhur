@@ -44,13 +44,13 @@ export default function LiputanSection() {
         <div className="mb-10 text-center">
           <p
             className="mb-3 text-sm font-semibold tracking-widest"
-            style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#D4622E" }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
           >
             Liputan Media
           </p>
           <h2
             className="text-4xl font-extrabold md:text-5xl lg:text-6xl"
-            style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#1C3829" }}
+            style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#1C3829" }}
           >
             Kabar dari Ngudi Luhur
           </h2>
@@ -82,13 +82,13 @@ export default function LiputanSection() {
                 <div className="flex-1">
                   <p
                     className="mb-1 text-xs font-medium"
-                    style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#7a9a84" }}
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#7a9a84" }}
                   >
                     {article.source}
                   </p>
                   <h3
                     className="text-lg font-bold leading-snug md:text-xl"
-                    style={{ fontFamily: '"BricolageGrotesque", sans-serif', color: "#1C3829" }}
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#1C3829" }}
                   >
                     {article.title}
                   </h3>
@@ -99,7 +99,7 @@ export default function LiputanSection() {
                   href={article.href}
                   className="flex-shrink-0 text-sm font-semibold transition-opacity hover:opacity-70"
                   style={{
-                    fontFamily: '"BricolageGrotesque", sans-serif',
+                    fontFamily: '"PlusJakartaSans", sans-serif',
                     color: "#D4622E",
                     whiteSpace: "nowrap",
                   }}
