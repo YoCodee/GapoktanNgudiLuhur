@@ -10,11 +10,13 @@ const stats = [
 export default function HeroEkspor() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-[#1C3829]">
-      {/* Background image matching Hero-Ekspor.png / Frame 24 */}
+      {/* Background image HD */}
       <Image
-        src="/assets/Frame 24.png"
+        src="/assets/hero-ekspor-hd.webp"
         alt="Aktivitas Sortir Ekspor Salak Nglumut"
         fill
+        unoptimized
+        sizes="100vw"
         className="object-cover object-center"
         priority
       />

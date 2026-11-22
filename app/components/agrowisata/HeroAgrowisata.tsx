@@ -13,11 +13,13 @@ export default function HeroAgrowisata() {
 
   return (
     <section className="relative min-h-[90vh] lg:min-h-screen w-full overflow-hidden bg-[#1C3829] flex items-center">
-      {/* Background image */}
+      {/* Background image HD */}
       <Image
         src="/assets/DSC04999.webp"
         alt="Agrowisata Karang Taruna Ngudi Luhur"
         fill
+        unoptimized
+        sizes="100vw"
         className="object-cover object-center"
         priority
       />

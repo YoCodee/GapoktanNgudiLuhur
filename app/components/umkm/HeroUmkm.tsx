@@ -13,12 +13,14 @@ export default function HeroUmkm() {
 
   return (
     <section className="relative min-h-[90vh] lg:min-h-screen w-full overflow-hidden bg-[#1C3829] flex items-center">
-      {/* Background image zoomed & positioned to frame the team cleanly */}
+      {/* Background image HD without CSS zoom blur */}
       <Image
-        src="/assets/pillar-kwt.webp"
+        src="/assets/hero-umkm-hd.webp"
         alt="Kelompok Wanita Tani Ngudi Luhur"
         fill
-        className="object-cover object-[center_72%] scale-[1.22] origin-[center_70%]"
+        unoptimized
+        sizes="100vw"
+        className="object-cover object-center"
         priority
       />
 

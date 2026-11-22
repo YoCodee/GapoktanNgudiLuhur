@@ -18,10 +18,11 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/assets/section1.webp"
+          src="/assets/hero-home-hd.webp"
           alt="Salak Nglumut Premium Gapoktan Ngudi Luhur"
           fill
           priority
+          unoptimized
           className="object-cover object-right md:object-center select-none"
           sizes="100vw"
         />
