@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import ScrollReveal from "../ScrollReveal";
 
 const packages = [
   {
@@ -15,7 +16,7 @@ const packages = [
     iconBg: "bg-white/10",
     buttonText: "Booking Paket Ini →",
     buttonClass:
-      "border border-white/30 bg-transparent text-white hover:bg-white/10",
+      "bg-[#D4622E] text-white shadow-md hover:brightness-110 hover:shadow-lg",
     features: [
       "Tur keliling kebun salak",
       "Praktik teknik penyerbukan",
@@ -35,7 +36,7 @@ const packages = [
     iconBg: "bg-white/20",
     buttonText: "Ajukan Kunjungan →",
     buttonClass:
-      "border border-white/50 bg-white/15 text-white hover:bg-white/25",
+      "bg-[#1C3829] text-white shadow-md hover:bg-[#152b1f] hover:shadow-lg",
     features: [
       "Presentasi manajemen Gapoktan",
       "Kunjungan Packing House",
@@ -55,7 +56,7 @@ const packages = [
     iconBg: "bg-white/10",
     buttonText: "Booking Paket Ini →",
     buttonClass:
-      "border border-white/30 bg-transparent text-white hover:bg-white/10",
+      "bg-[#D4622E] text-white shadow-md hover:brightness-110 hover:shadow-lg",
     features: [
       "Akses kebun salak organik",
       "Pemandu lokal berpengalaman",
@@ -92,7 +93,7 @@ export default function PaketAgrowisata() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
         {/* Header */}
-        <div className="mx-auto mb-14 max-w-2xl text-center">
+        <ScrollReveal variant="fade-up" className="mx-auto mb-14 max-w-2xl text-center">
           <p
             className="mb-3 text-sm font-bold uppercase tracking-wider"
             style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
@@ -107,14 +108,14 @@ export default function PaketAgrowisata() {
             <br />
             yang Tepat untuk Anda
           </h2>
-        </div>
+        </ScrollReveal>
 
         {/* 3 Package Cards */}
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-8">
-          {packages.map((pkg) => (
+          {packages.map((pkg, idx) => (
+            <ScrollReveal key={pkg.id} variant="pop-up" delay={idx * 140} className="flex">
             <div
-              key={pkg.id}
-              className={`flex flex-col justify-between rounded-3xl border p-8 shadow-lg transition-transform duration-300 hover:-translate-y-1 ${pkg.borderClass}`}
+              className={`flex w-full flex-col justify-between rounded-3xl border p-8 shadow-lg transition-transform duration-300 hover:-translate-y-1 ${pkg.borderClass}`}
               style={{ backgroundColor: pkg.cardBg }}
             >
               <div>
@@ -195,6 +196,7 @@ export default function PaketAgrowisata() {
                 {pkg.buttonText}
               </button>
             </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

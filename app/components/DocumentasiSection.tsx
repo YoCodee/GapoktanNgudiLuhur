@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollReveal from "./ScrollReveal";
 
 const cards = [
   {
@@ -58,7 +59,7 @@ export default function DocumentasiSection() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
         {/* Header */}
-        <div className="mb-12 text-center">
+        <ScrollReveal variant="fade-up" className="mb-12 text-center">
           <p
             className="mb-3 text-sm font-semibold tracking-widest"
             style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
@@ -79,83 +80,86 @@ export default function DocumentasiSection() {
             <br className="hidden md:block" />
             setiap hari Ngudi Luhur bergerak nyata.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Grid layout: 1 large left + 2x2 right */}
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {/* Large card — spans 2 rows */}
           {largeCard && (
-            <div
-              className="relative overflow-hidden rounded-2xl"
-              style={{ gridRow: "span 2", minHeight: "420px" }}
-            >
-              <Image
-                src={largeCard.image}
-                alt={largeCard.title}
-                fill
-                sizes="(max-width: 768px) 100vw, 40vw"
-                className="object-cover"
-              />
+            <ScrollReveal variant="zoom-in" delay={0} className="lg:row-span-2">
               <div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    "linear-gradient(to top, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0.20) 50%, transparent 100%)",
-                }}
-              />
-              <div className="absolute bottom-0 left-0 p-6">
-                <p
-                  className="mb-1 text-xs font-medium text-white/70"
-                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
-                >
-                  {largeCard.category}
-                </p>
-                <p
-                  className="text-xl font-bold text-white md:text-2xl"
-                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
-                >
-                  {largeCard.title}
-                </p>
+                className="relative h-full overflow-hidden rounded-2xl"
+                style={{ minHeight: "420px" }}
+              >
+                <Image
+                  src={largeCard.image}
+                  alt={largeCard.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  className="object-cover"
+                />
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "linear-gradient(to top, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0.20) 50%, transparent 100%)",
+                  }}
+                />
+                <div className="absolute bottom-0 left-0 p-6">
+                  <p
+                    className="mb-1 text-xs font-medium text-white/70"
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
+                  >
+                    {largeCard.category}
+                  </p>
+                  <p
+                    className="text-xl font-bold text-white md:text-2xl"
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
+                  >
+                    {largeCard.title}
+                  </p>
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           )}
 
           {/* Small cards — 2x2 */}
-          {smallCards.map((card) => (
-            <div
-              key={card.id}
-              className="relative overflow-hidden rounded-2xl"
-              style={{ minHeight: "200px" }}
-            >
-              <Image
-                src={card.image}
-                alt={card.title}
-                fill
-                sizes="(max-width: 768px) 100vw, 30vw"
-                className="object-cover"
-              />
+          {smallCards.map((card, idx) => (
+            <ScrollReveal key={card.id} variant="zoom-in" delay={(idx + 1) * 90}>
               <div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    "linear-gradient(to top, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0.10) 60%, transparent 100%)",
-                }}
-              />
-              <div className="absolute bottom-0 left-0 p-4">
-                <p
-                  className="mb-0.5 text-xs font-medium text-white/70"
-                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
-                >
-                  {card.category}
-                </p>
-                <p
-                  className="text-base font-bold text-white md:text-lg"
-                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
-                >
-                  {card.title}
-                </p>
+                className="relative overflow-hidden rounded-2xl"
+                style={{ minHeight: "200px" }}
+              >
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 30vw"
+                  className="object-cover"
+                />
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "linear-gradient(to top, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0.10) 60%, transparent 100%)",
+                  }}
+                />
+                <div className="absolute bottom-0 left-0 p-4">
+                  <p
+                    className="mb-0.5 text-xs font-medium text-white/70"
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
+                  >
+                    {card.category}
+                  </p>
+                  <p
+                    className="text-base font-bold text-white md:text-lg"
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
+                  >
+                    {card.title}
+                  </p>
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

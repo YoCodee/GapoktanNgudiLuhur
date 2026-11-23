@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ScrollReveal from "./ScrollReveal";
 
 export default function AboutSection() {
   return (
@@ -19,7 +20,7 @@ export default function AboutSection() {
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column (6 cols) */}
-          <div className="lg:col-span-6">
+          <ScrollReveal variant="slide-left" className="lg:col-span-6">
             <p
               className="text-[#D4622E] font-semibold text-base mb-4"
               style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
@@ -66,17 +67,17 @@ export default function AboutSection() {
 
             <div className="mt-10">
               <Link
-                href="#ekspor"
-                className="inline-flex items-center justify-center px-8 py-3.5 bg-white text-[#1C3829] text-base font-semibold rounded-full shadow-md hover:bg-neutral-100 active:scale-[0.98] transition-all duration-200 cursor-pointer"
+                href="/ekspor"
+                className="inline-flex items-center justify-center px-8 py-3.5 bg-[#D4622E] text-white text-base font-semibold rounded-full shadow-md hover:brightness-110 hover:shadow-lg active:scale-[0.98] transition-all duration-200 cursor-pointer"
                 style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
               >
                 Lihat Alur Ekspor
               </Link>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Right Column (6 cols) - Image & Badge matching Frame 14.png */}
-          <div className="lg:col-span-6 flex justify-center lg:justify-end pb-10 pr-6 sm:pb-12 sm:pr-8">
+          <ScrollReveal variant="zoom-in" delay={150} className="lg:col-span-6 flex justify-center lg:justify-end pb-10 pr-6 sm:pb-12 sm:pr-8">
             <div className="relative w-full max-w-[500px]">
               {/* Photo with rounded corners */}
               <div className="relative aspect-[4/4.3] w-full rounded-[28px] overflow-hidden shadow-2xl">
@@ -116,7 +117,7 @@ export default function AboutSection() {
                 </p>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

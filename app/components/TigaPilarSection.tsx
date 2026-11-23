@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import ScrollReveal from "./ScrollReveal";
 
 // Diagonal staircase left → right:
 // Top AND bottom both descend — cards offset downward with marginTop
@@ -59,7 +60,7 @@ export default function TigaPilarSection() {
       />
 
       {/* Header */}
-      <div className="relative z-10 text-center mb-20 px-4">
+      <ScrollReveal variant="fade-up" className="relative z-10 text-center mb-20 px-4">
         <p
           style={{
             fontFamily: '"PlusJakartaSans", sans-serif',
@@ -83,24 +84,29 @@ export default function TigaPilarSection() {
         >
           Tiga Pilar Utama
         </h2>
-      </div>
+      </ScrollReveal>
 
       {/* Cards — stacked cleanly on mobile, staircase left→right on desktop (lg+) */}
       <div
         className="relative z-10 flex flex-col items-center gap-12 px-6 lg:flex-row lg:items-start lg:justify-center lg:gap-[clamp(16px,2.5vw,36px)] lg:px-24"
       >
-        {pillars.map((pillar) => (
-          <div
+        {pillars.map((pillar, idx) => (
+          <ScrollReveal
             key={pillar.id}
-            className="flex flex-col items-center shrink-0 mt-0 lg:mt-[var(--pillar-mt)]"
-            style={
-              {
-                "--pillar-mt": `${pillar.marginTop}px`,
-                "--pillar-w": `${pillar.widthPx}px`,
-                "--pillar-h": `${pillar.heightPx}px`,
-              } as React.CSSProperties
-            }
+            variant="zoom-in"
+            delay={idx * 150}
+            className="flex flex-col items-center shrink-0"
           >
+            <div
+              className="flex flex-col items-center mt-0 lg:mt-[var(--pillar-mt)]"
+              style={
+                {
+                  "--pillar-mt": `${pillar.marginTop}px`,
+                  "--pillar-w": `${pillar.widthPx}px`,
+                  "--pillar-h": `${pillar.heightPx}px`,
+                } as React.CSSProperties
+              }
+            >
             {/* Arch card — true arch on top, smooth rounded corners at bottom */}
             <div
               className="relative overflow-hidden w-[270px] h-[370px] sm:w-[300px] sm:h-[410px] lg:w-[var(--pillar-w)] lg:h-[var(--pillar-h)] rounded-t-full rounded-b-[18px]"
@@ -152,7 +158,8 @@ export default function TigaPilarSection() {
             >
               {pillar.label}
             </p>
-          </div>
+            </div>
+          </ScrollReveal>
         ))}
       </div>
     </section>

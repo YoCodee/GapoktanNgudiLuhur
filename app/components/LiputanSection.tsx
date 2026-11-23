@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollReveal from "./ScrollReveal";
 
 const articles = [
   {
@@ -41,7 +42,7 @@ export default function LiputanSection() {
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
         {/* Header */}
-        <div className="mb-10 text-center">
+        <ScrollReveal variant="fade-up" className="mb-10 text-center">
           <p
             className="mb-3 text-sm font-semibold tracking-widest"
             style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
@@ -54,12 +55,12 @@ export default function LiputanSection() {
           >
             Kabar dari Ngudi Luhur
           </h2>
-        </div>
+        </ScrollReveal>
 
         {/* Article list */}
         <div>
           {articles.map((article, idx) => (
-            <div key={article.id}>
+            <ScrollReveal key={article.id} variant="slide-left" delay={idx * 120}>
               {/* Divider atas */}
               <div style={{ height: "1px", backgroundColor: "#d1d9d4" }} />
 
@@ -112,7 +113,7 @@ export default function LiputanSection() {
               {idx === articles.length - 1 && (
                 <div style={{ height: "1px", backgroundColor: "#d1d9d4" }} />
               )}
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

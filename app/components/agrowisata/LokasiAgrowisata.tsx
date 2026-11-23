@@ -1,5 +1,7 @@
 "use client";
 
+import ScrollReveal from "../ScrollReveal";
+
 export default function LokasiAgrowisata() {
   const mapsLink =
     "https://maps.google.com/?q=Jrakah,+Kaliurang,+Kec.+Srumbung,+Magelang+56483";
@@ -10,7 +12,7 @@ export default function LokasiAgrowisata() {
     <section className="w-full bg-[#FAF9F6] pb-20 pt-8 lg:pb-28">
       <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
         {/* Header */}
-        <div className="mx-auto mb-12 max-w-2xl text-center">
+        <ScrollReveal variant="fade-up" className="mx-auto mb-12 max-w-2xl text-center">
           <p
             className="mb-3 text-sm font-bold uppercase tracking-wider"
             style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
@@ -32,9 +34,10 @@ export default function LokasiAgrowisata() {
             Terletak di kaki Gunung Merapi yang sejuk, mudah diakses dari
             Yogyakarta, Magelang, dan Solo.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Map Card */}
+        <ScrollReveal variant="zoom-in" delay={120}>
         <div className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl bg-[#1C3829] shadow-md">
           <div className="relative h-[340px] w-full sm:h-[380px]">
             <iframe
@@ -49,6 +52,7 @@ export default function LokasiAgrowisata() {
             />
           </div>
         </div>
+        </ScrollReveal>
 
         {/* Address Bar & Google Maps CTA */}
         <div className="mt-8 flex flex-col items-center justify-center gap-4 text-center sm:flex-row">

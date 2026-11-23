@@ -1,5 +1,7 @@
 "use client";
 
+import ScrollReveal from "./ScrollReveal";
+
 export default function LocationSection() {
   const waLink =
     "https://wa.me/6281234567890?text=Halo%20Gapoktan%20Ngudi%20Luhur%2C%20saya%20ingin%20bermitra";
@@ -15,7 +17,7 @@ export default function LocationSection() {
       style={{ backgroundColor: "#1C3829", paddingTop: "80px", paddingBottom: "0" }}
     >
       {/* Text block */}
-      <div className="mx-auto max-w-4xl px-6 pb-12 text-center md:px-12">
+      <ScrollReveal variant="blur-in" className="mx-auto max-w-4xl px-6 pb-12 text-center md:px-12">
         <p
           className="mb-4 text-sm font-semibold tracking-widest"
           style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
@@ -41,15 +43,16 @@ export default function LocationSection() {
           href={waLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block rounded-full border border-white/40 bg-white px-8 py-3 text-sm font-semibold text-[#1C3829] transition-all hover:bg-white/90"
+          className="inline-block rounded-full bg-[#D4622E] px-8 py-3.5 text-sm font-bold text-white shadow-md transition-all hover:brightness-110 hover:shadow-lg active:scale-95"
           style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
         >
           Hubungi via WhatsApp
         </a>
-      </div>
+      </ScrollReveal>
 
       {/* Map container */}
-      <div className="relative mx-6 mb-0 overflow-hidden rounded-t-3xl md:mx-12 lg:mx-16" style={{ height: "380px" }}>
+      <ScrollReveal variant="zoom-in" delay={150}>
+        <div className="relative mx-6 mb-0 overflow-hidden rounded-t-3xl md:mx-12 lg:mx-16" style={{ height: "380px" }}>
         <iframe
           src={embedSrc}
           width="100%"
@@ -87,12 +90,13 @@ export default function LocationSection() {
           href={mapsLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute bottom-5 right-5 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm font-semibold text-[#1C3829] shadow-lg transition-all hover:bg-gray-50"
+          className="absolute bottom-5 right-5 rounded-full bg-[#D4622E] px-5 py-2 text-sm font-bold text-white shadow-lg transition-all hover:brightness-110 active:scale-95"
           style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
         >
           Buka di Google Maps
         </a>
       </div>
+      </ScrollReveal>
     </section>
   );
 }

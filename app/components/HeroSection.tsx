@@ -89,7 +89,7 @@ export default function HeroSection() {
           {/* CTA Button */}
           <button
             onClick={scrollToAbout}
-            className="inline-flex items-center justify-center px-8 py-3.5 bg-white text-[#1C3829] text-base font-semibold rounded-full shadow-md hover:bg-neutral-100 active:scale-[0.98] transition-all duration-200 cursor-pointer"
+            className="inline-flex items-center justify-center px-8 py-3.5 bg-[#D4622E] text-white text-base font-semibold rounded-full shadow-md hover:brightness-110 hover:shadow-lg active:scale-[0.98] transition-all duration-200 cursor-pointer"
             style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
           >
             Lebih Detail

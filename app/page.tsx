@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 
 export default function HomePage() {
   return (
-    <div className="relative min-h-screen bg-[#FAF9F6] text-[#1C3829] selection:bg-[#D4622E] selection:text-white">
+    <div className="relative min-h-screen bg-[#FAF9F6] text-[#1C3829] selection:bg-[#D4622E] selection:text-white overflow-x-clip">
       {/* Navigation Header */}
       <Navbar />
 

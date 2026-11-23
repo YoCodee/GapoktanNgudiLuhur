@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollReveal from "../ScrollReveal";
 
 export default function TentangAgrowisata() {
   return (
@@ -6,7 +7,7 @@ export default function TentangAgrowisata() {
       <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left Column: Text */}
-          <div>
+          <ScrollReveal variant="slide-left">
             <p
               className="mb-3 text-sm font-bold uppercase tracking-wider"
               style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
@@ -43,10 +44,10 @@ export default function TentangAgrowisata() {
                 ekonomi pariwisata berkelanjutan.
               </p>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Right Column: Photo */}
-          <div className="flex justify-center lg:justify-end">
+          <ScrollReveal variant="zoom-in" delay={150} className="flex justify-center lg:justify-end">
             <div className="relative aspect-square w-full max-w-[540px] overflow-hidden rounded-3xl shadow-sm">
               <Image
                 src="/assets/DSC04999.webp"
@@ -55,7 +56,7 @@ export default function TentangAgrowisata() {
                 className="object-cover object-center"
               />
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

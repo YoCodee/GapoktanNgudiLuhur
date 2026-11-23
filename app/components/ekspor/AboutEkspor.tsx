@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollReveal from "../ScrollReveal";
 
 const partners = [
   {
@@ -44,7 +45,7 @@ export default function AboutEkspor() {
     >
       <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
         {/* Top — 2 col header */}
-        <div className="mb-12 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+        <ScrollReveal variant="fade-up" className="mb-12 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
           <div>
             <p
               className="mb-3 text-sm font-semibold tracking-wide"
@@ -69,45 +70,49 @@ export default function AboutEkspor() {
               dipercaya di Indonesia.
             </p>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Partner cards */}
         <div className="mb-14 grid grid-cols-1 gap-6 md:grid-cols-2">
-          {partners.map((p) => (
-            <div
+          {partners.map((p, idx) => (
+            <ScrollReveal
               key={p.name}
-              className="rounded-2xl border p-7 shadow-sm transition-shadow hover:shadow-md"
-              style={{ borderColor: "#eceeed", backgroundColor: "#ffffff" }}
+              variant={idx === 0 ? "slide-left" : "slide-right"}
+              delay={idx * 100}
+              className="rounded-2xl border border-[#eceeed] bg-white p-7 shadow-sm transition-shadow hover:shadow-md"
             >
-              <p
-                className="mb-2 text-xs font-bold tracking-widest uppercase"
-                style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
-              >
-                {p.tag}
-              </p>
-              <h3
-                className="mb-3 text-2xl font-bold text-[#1C3829]"
-                style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
-              >
-                {p.name}
-              </h3>
-              <p
-                className="text-sm leading-relaxed text-gray-600"
-                style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
-              >
-                {p.desc}
-              </p>
-            </div>
+              <div>
+                <p
+                  className="mb-2 text-xs font-bold tracking-widest uppercase"
+                  style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
+                >
+                  {p.tag}
+                </p>
+                <h3
+                  className="mb-3 text-2xl font-bold text-[#1C3829]"
+                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
+                >
+                  {p.name}
+                </h3>
+                <p
+                  className="text-sm leading-relaxed text-gray-600"
+                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
+                >
+                  {p.desc}
+                </p>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* Certifications row with real icons */}
         <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
           {certifications.map((c, i) => (
-            <div
+            <ScrollReveal
               key={i}
-              className="border-l-2 pl-4 flex flex-col justify-start"
-              style={{ borderColor: "#e5e7eb" }}
+              variant="pop-up"
+              delay={i * 90}
+              className="border-l-2 border-gray-200 pl-4 flex flex-col justify-start"
             >
               <div className="mb-3 relative w-6 h-6 flex items-center">
                 <Image
@@ -130,7 +135,7 @@ export default function AboutEkspor() {
               >
                 {c.desc}
               </p>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

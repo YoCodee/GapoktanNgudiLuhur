@@ -77,7 +77,7 @@ export default function Navbar() {
           <div className="hidden md:block">
             <Link
               href="/#hubungi-kami"
-              className="inline-flex items-center justify-center px-6 py-2.5 bg-white text-[#1C3829] text-sm font-semibold rounded-xl shadow hover:bg-neutral-100 active:scale-95 transition-all"
+              className="inline-flex items-center justify-center px-6 py-2.5 bg-[#D4622E] text-white text-sm font-semibold rounded-xl shadow-md hover:brightness-110 hover:shadow-lg active:scale-95 transition-all"
               style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Hubungi Kami
@@ -156,7 +156,7 @@ export default function Navbar() {
             <Link
               href="/#hubungi-kami"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full py-3.5 bg-white text-[#1C3829] font-bold rounded-xl shadow text-center block"
+              className="w-full py-3.5 bg-[#D4622E] text-white font-bold rounded-xl shadow-md hover:brightness-110 transition-all text-center block"
               style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Hubungi Kami

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import ScrollReveal from "../ScrollReveal";
 
 type Category = "semua" | "makanan" | "minuman";
 
@@ -93,7 +94,7 @@ export default function ProdukUmkm() {
     <section id="katalog-produk" className="w-full bg-[#FAF9F6] py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
         {/* Header */}
-        <div className="mx-auto max-w-2xl text-center">
+        <ScrollReveal variant="fade-up" className="mx-auto max-w-2xl text-center">
           <p
             className="mb-3 text-sm font-bold uppercase tracking-wider"
             style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
@@ -115,7 +116,7 @@ export default function ProdukUmkm() {
             Setiap produk dibuat dari bahan baku Salak Nglumut pilihan — segar,
             organik, dan diproses dengan standar higienitas tinggi.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Filter Tabs */}
         <div className="mt-10 mb-12 flex justify-center">
@@ -158,16 +159,21 @@ export default function ProdukUmkm() {
 
         {/* Product Grid: 4 cols */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {filteredProducts.map((item) => {
+          {filteredProducts.map((item, idx) => {
             const waMessage = encodeURIComponent(
               `Halo KWT Ngudi Luhur, saya ingin memesan produk: ${item.name} (${item.price}). Mohon informasi ketersediaannya.`
             );
             const waUrl = `https://wa.me/6281234567890?text=${waMessage}`;
 
             return (
-              <div
+              <ScrollReveal
                 key={item.id}
-                className="group flex flex-col justify-between overflow-hidden rounded-2xl bg-white border border-gray-100 shadow-sm transition-all hover:shadow-md"
+                variant="zoom-in"
+                delay={(idx % 4) * 75}
+                className="flex"
+              >
+              <div
+                className="group flex w-full flex-col justify-between overflow-hidden rounded-2xl bg-white border border-gray-100 shadow-sm transition-all hover:shadow-md"
               >
                 {/* Product Image */}
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-100">
@@ -227,6 +233,7 @@ export default function ProdukUmkm() {
                   </a>
                 </div>
               </div>
+              </ScrollReveal>
             );
           })}
         </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollReveal from "../ScrollReveal";
 
 const steps = [
   {
@@ -44,7 +45,7 @@ export default function AlurEkspor() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
         {/* Header */}
-        <div className="mb-14 text-center">
+        <ScrollReveal variant="blur-in" className="mb-14 text-center">
           <p
             className="mb-3 text-sm font-semibold tracking-widest uppercase"
             style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
@@ -64,7 +65,7 @@ export default function AlurEkspor() {
             Setiap tahap dikendalikan dengan standar ketat untuk memastikan kualitas premium sampai
             ke tangan pembeli internasional.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Divider subtle line matching design */}
         <div
@@ -74,56 +75,57 @@ export default function AlurEkspor() {
 
         {/* Steps Grid with Card Containers matching Ekspor-3.png */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {steps.map((step) => (
-            <div
-              key={step.no}
-              className="group flex flex-col overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1"
-              style={{
-                backgroundColor: "#224131",
-                boxShadow: "0 10px 30px rgba(0,0,0,0.25)",
-              }}
-            >
-              {/* Card Image */}
+          {steps.map((step, idx) => (
+            <ScrollReveal key={step.no} variant="zoom-in" delay={idx * 110} className="flex">
               <div
-                className="relative w-full overflow-hidden"
-                style={{ aspectRatio: "16 / 10" }}
+                className="group flex w-full flex-col overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1"
+                style={{
+                  backgroundColor: "#224131",
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.25)",
+                }}
               >
-                <Image
-                  src={step.image}
-                  alt={step.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+                {/* Card Image */}
+                <div
+                  className="relative w-full overflow-hidden"
+                  style={{ aspectRatio: "16 / 10" }}
+                >
+                  <Image
+                    src={step.image}
+                    alt={step.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                {/* Card Body */}
+                <div className="p-6 flex flex-col flex-1">
+                  {/* Step number */}
+                  <p
+                    className="mb-2 text-3xl font-extrabold leading-none"
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
+                  >
+                    {step.no}
+                  </p>
+
+                  {/* Title */}
+                  <h3
+                    className="mb-3 text-lg md:text-xl font-bold text-white leading-snug"
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
+                  >
+                    {step.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p
+                    className="text-sm leading-relaxed text-white/70 mt-auto"
+                    style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
+                  >
+                    {step.desc}
+                  </p>
+                </div>
               </div>
-
-              {/* Card Body */}
-              <div className="p-6 flex flex-col flex-1">
-                {/* Step number */}
-                <p
-                  className="mb-2 text-3xl font-extrabold leading-none"
-                  style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
-                >
-                  {step.no}
-                </p>
-
-                {/* Title */}
-                <h3
-                  className="mb-3 text-lg md:text-xl font-bold text-white leading-snug"
-                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
-                >
-                  {step.title}
-                </h3>
-
-                {/* Description */}
-                <p
-                  className="text-sm leading-relaxed text-white/70 mt-auto"
-                  style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
-                >
-                  {step.desc}
-                </p>
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

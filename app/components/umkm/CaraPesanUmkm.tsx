@@ -1,3 +1,5 @@
+import ScrollReveal from "../ScrollReveal";
+
 export default function CaraPesanUmkm() {
   const steps = [
     {
@@ -21,7 +23,7 @@ export default function CaraPesanUmkm() {
     <section className="w-full bg-[#FAF9F6] py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
         {/* Header */}
-        <div className="mx-auto max-w-2xl text-center">
+        <ScrollReveal variant="fade-up" className="mx-auto max-w-2xl text-center">
           <p
             className="mb-3 text-sm font-bold uppercase tracking-wider"
             style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
@@ -36,12 +38,17 @@ export default function CaraPesanUmkm() {
             <br />
             Langsung ke Tangan Anda
           </h2>
-        </div>
+        </ScrollReveal>
 
         {/* 3 Steps */}
         <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-8 md:grid-cols-3 md:gap-10">
-          {steps.map((step) => (
-            <div key={step.num} className="flex flex-col items-center text-center">
+          {steps.map((step, idx) => (
+            <ScrollReveal
+              key={step.num}
+              variant="pop-up"
+              delay={idx * 140}
+              className="flex flex-col items-center text-center"
+            >
               <div
                 className="mb-5 flex h-14 w-14 items-center justify-center rounded-full text-xl font-extrabold text-white shadow-sm"
                 style={{
@@ -63,7 +70,7 @@ export default function CaraPesanUmkm() {
               >
                 {step.desc}
               </p>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 

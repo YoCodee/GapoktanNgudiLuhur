@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function AgroWisataPage() {
   return (
-    <div className="relative min-h-screen bg-[#FAF9F6] text-[#1C3829] selection:bg-[#D4622E] selection:text-white">
+    <div className="relative min-h-screen bg-[#FAF9F6] text-[#1C3829] selection:bg-[#D4622E] selection:text-white overflow-x-clip">
       <Navbar />
       <main>
         {/* Section 1: Hero */}

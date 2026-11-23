@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import ScrollReveal from "../ScrollReveal";
 
 const packageOptions = [
   "Paket Edukasi Budidaya",
@@ -67,7 +68,7 @@ export default function BookingAgrowisata() {
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Left Column: Info */}
-          <div className="lg:col-span-5 lg:pt-6">
+          <ScrollReveal variant="slide-left" className="lg:col-span-5 lg:pt-6">
             <p
               className="mb-3 text-sm font-bold uppercase tracking-wider"
               style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
@@ -101,21 +102,21 @@ export default function BookingAgrowisata() {
               href={directWaUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 rounded-full border border-white/25 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-white/10 active:scale-95"
+              className="inline-flex items-center gap-2.5 rounded-full bg-[#D4622E] px-6 py-3 text-sm font-bold text-white shadow-md transition-all hover:brightness-110 hover:shadow-lg active:scale-95"
               style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               <svg
-                className="h-4 w-4 fill-current text-[#25D366]"
+                className="h-4 w-4 fill-current text-white"
                 viewBox="0 0 24 24"
               >
                 <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z" />
               </svg>
               Via WhatsApp
             </a>
-          </div>
+          </ScrollReveal>
 
           {/* Right Column: Form Card */}
-          <div className="lg:col-span-7">
+          <ScrollReveal variant="slide-right" delay={150} className="lg:col-span-7">
             <form
               onSubmit={handleSubmit}
               className="rounded-3xl border border-white/10 bg-[#224131] p-6 shadow-xl sm:p-8 lg:p-10"
@@ -258,7 +259,7 @@ export default function BookingAgrowisata() {
                 </button>
               </div>
             </form>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

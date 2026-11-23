@@ -68,7 +68,7 @@ export default function HeroEkspor() {
               href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20menghubungi%20Tim%20Ekspor"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-full bg-white px-8 py-3.5 text-sm font-bold text-[#1C3829] shadow-md transition-all hover:bg-neutral-100 hover:shadow-lg active:scale-95"
+              className="inline-block rounded-full bg-[#D4622E] px-8 py-3.5 text-sm font-bold text-white shadow-md transition-all hover:brightness-110 hover:shadow-lg active:scale-95"
               style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
             >
               Hubungi Tim Ekspor

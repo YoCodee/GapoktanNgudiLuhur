@@ -1,3 +1,5 @@
+import ScrollReveal from "./ScrollReveal";
+
 const missions = [
   "Meningkatkan kesejahteraan petani di Desa Kaliurang dan Kecamatan Srumbung secara luas.",
   "Memperkuat posisi Kabupaten Magelang sebagai sentra hortikultura unggulan nasional.",
@@ -13,7 +15,7 @@ export default function VisionMissionSection() {
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column (5 cols) - Visi */}
-          <div className="lg:col-span-5">
+          <ScrollReveal variant="blur-in" className="lg:col-span-5">
             <p
               className="text-[#D4622E] font-semibold text-base mb-5"
               style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
@@ -40,21 +42,25 @@ export default function VisionMissionSection() {
               berkelanjutan dan berdaya saing global melalui sinergi petani,
               sektor swasta, dan pemerintah.
             </p>
-          </div>
+          </ScrollReveal>
 
           {/* Right Column (7 cols) - Misi matching Frame 16.png */}
           <div className="lg:col-span-7">
-            <p
-              className="text-[#D4622E] font-semibold text-base mb-5"
-              style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
-            >
-              Misi
-            </p>
+            <ScrollReveal variant="fade-up">
+              <p
+                className="text-[#D4622E] font-semibold text-base mb-5"
+                style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
+              >
+                Misi
+              </p>
+            </ScrollReveal>
 
             <div className="border-t border-[#A69F94]/50">
               {missions.map((mission, index) => (
-                <div
+                <ScrollReveal
                   key={index}
+                  variant="slide-right"
+                  delay={index * 120}
                   className="py-6 sm:py-7 border-b border-[#A69F94]/50 flex items-start gap-5"
                 >
                   {/* Concentric orange target circle icon matching Figma */}
@@ -68,7 +74,7 @@ export default function VisionMissionSection() {
                   >
                     {mission}
                   </p>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
           </div>

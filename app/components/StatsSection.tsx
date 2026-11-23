@@ -1,3 +1,5 @@
+import ScrollReveal from "./ScrollReveal";
+
 export default function StatsSection() {
   return (
     <section
@@ -7,7 +9,7 @@ export default function StatsSection() {
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column (5 cols) */}
-          <div className="lg:col-span-5">
+          <ScrollReveal variant="slide-left" className="lg:col-span-5">
             <p
               className="text-[#D4622E] font-semibold text-base mb-5"
               style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
@@ -34,7 +36,7 @@ export default function StatsSection() {
             >
               Sejak 2017
             </p>
-          </div>
+          </ScrollReveal>
 
           {/* Right Column (7 cols) - Stats Grid matching Frame 11.png */}
           <div className="lg:col-span-7">
@@ -42,7 +44,7 @@ export default function StatsSection() {
               {/* Row 1 */}
               <div className="grid grid-cols-2 border-b border-[#A69F94]/50">
                 {/* Global */}
-                <div className="py-7 sm:py-9 pr-6 sm:pr-10 border-r border-[#A69F94]/50">
+                <ScrollReveal variant="pop-up" delay={0} className="py-7 sm:py-9 pr-6 sm:pr-10 border-r border-[#A69F94]/50">
                   <p
                     className="text-[#1C3829] text-base font-medium mb-3"
                     style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
@@ -61,10 +63,10 @@ export default function StatsSection() {
                   >
                     + Hektar Lahan
                   </p>
-                </div>
+                </ScrollReveal>
 
                 {/* China */}
-                <div className="py-7 sm:py-9 pl-6 sm:pl-10">
+                <ScrollReveal variant="pop-up" delay={90} className="py-7 sm:py-9 pl-6 sm:pl-10">
                   <p
                     className="text-[#1C3829] text-base font-medium mb-3"
                     style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
@@ -83,13 +85,13 @@ export default function StatsSection() {
                   >
                     + Ton Ekspor
                   </p>
-                </div>
+                </ScrollReveal>
               </div>
 
               {/* Row 2 */}
               <div className="grid grid-cols-2">
                 {/* Volume */}
-                <div className="py-7 sm:py-9 pr-6 sm:pr-10 border-r border-[#A69F94]/50">
+                <ScrollReveal variant="pop-up" delay={180} className="py-7 sm:py-9 pr-6 sm:pr-10 border-r border-[#A69F94]/50">
                   <p
                     className="text-[#1C3829] text-base font-medium mb-3"
                     style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
@@ -108,10 +110,10 @@ export default function StatsSection() {
                   >
                     30-50 Ton / Minggu
                   </p>
-                </div>
+                </ScrollReveal>
 
                 {/* Pasar */}
-                <div className="py-7 sm:py-9 pl-6 sm:pl-10">
+                <ScrollReveal variant="pop-up" delay={270} className="py-7 sm:py-9 pl-6 sm:pl-10">
                   <p
                     className="text-[#1C3829] text-base font-medium mb-3"
                     style={{ fontFamily: '"PlusJakartaSans", sans-serif' }}
@@ -130,7 +132,7 @@ export default function StatsSection() {
                   >
                     + Negara Tujuan
                   </p>
-                </div>
+                </ScrollReveal>
               </div>
             </div>
           </div>

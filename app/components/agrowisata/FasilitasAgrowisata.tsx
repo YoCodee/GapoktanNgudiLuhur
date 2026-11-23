@@ -1,11 +1,12 @@
 import Image from "next/image";
+import ScrollReveal from "../ScrollReveal";
 
 export default function FasilitasAgrowisata() {
   return (
     <section className="w-full bg-[#FAF9F6] py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
         {/* Header */}
-        <div className="mx-auto mb-12 max-w-2xl text-center">
+        <ScrollReveal variant="fade-up" className="mx-auto mb-12 max-w-2xl text-center">
           <p
             className="mb-3 text-sm font-bold uppercase tracking-wider"
             style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
@@ -27,14 +28,15 @@ export default function FasilitasAgrowisata() {
             Kami memastikan setiap pengunjung mendapat kenyamanan maksimal
             selama berada di kawasan Agrowisata Ngudi Luhur.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Bento Gallery Grid */}
         <div className="space-y-5">
           {/* Top Row: 1 Large Left (7 cols) + 2 Stacked Right (5 cols) */}
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-12">
             {/* Card 1: Area Sortasi & Packing House */}
-            <div className="group relative min-h-[300px] overflow-hidden rounded-2xl bg-neutral-200 shadow-sm lg:col-span-7 lg:min-h-[420px]">
+            <ScrollReveal variant="zoom-in" delay={0} className="lg:col-span-7">
+            <div className="group relative h-full min-h-[300px] overflow-hidden rounded-2xl bg-neutral-200 shadow-sm lg:min-h-[420px]">
               <Image
                 src="/assets/umkm/unggulan-umkm.png"
                 alt="Area Sortasi dan Packing House"
@@ -63,10 +65,12 @@ export default function FasilitasAgrowisata() {
                 </h3>
               </div>
             </div>
+            </ScrollReveal>
 
             {/* Right Column: 2 Stacked Cards */}
             <div className="grid grid-cols-1 gap-5 lg:col-span-5">
               {/* Card 2: Kebun Salak Nglumut Asri */}
+              <ScrollReveal variant="zoom-in" delay={100}>
               <div className="group relative min-h-[200px] overflow-hidden rounded-2xl bg-neutral-200 shadow-sm">
                 <Image
                   src="/assets/DSC05002.webp"
@@ -96,8 +100,10 @@ export default function FasilitasAgrowisata() {
                   </h3>
                 </div>
               </div>
+              </ScrollReveal>
 
               {/* Card 3: Pusat Oleh-oleh KWT */}
+              <ScrollReveal variant="zoom-in" delay={190}>
               <div className="group relative min-h-[200px] overflow-hidden rounded-2xl bg-neutral-200 shadow-sm">
                 <Image
                   src="/assets/DSC04999.webp"
@@ -127,13 +133,15 @@ export default function FasilitasAgrowisata() {
                   </h3>
                 </div>
               </div>
+              </ScrollReveal>
             </div>
           </div>
 
           {/* Bottom Row: 2 Cards (7 cols + 5 cols) */}
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-12">
             {/* Card 4: Spot Edukasi & Foto Kebun */}
-            <div className="group relative min-h-[220px] overflow-hidden rounded-2xl bg-neutral-200 shadow-sm lg:col-span-7 lg:min-h-[250px]">
+            <ScrollReveal variant="zoom-in" delay={260} className="lg:col-span-7">
+            <div className="group relative min-h-[220px] overflow-hidden rounded-2xl bg-neutral-200 shadow-sm lg:min-h-[250px]">
               <Image
                 src="/assets/umkm/tentang-umkm.png"
                 alt="Spot Edukasi dan Foto Kebun"
@@ -162,9 +170,11 @@ export default function FasilitasAgrowisata() {
                 </h3>
               </div>
             </div>
+            </ScrollReveal>
 
             {/* Card 5: Pendopo & Ruang Pertemuan */}
-            <div className="group relative min-h-[220px] overflow-hidden rounded-2xl bg-neutral-200 shadow-sm lg:col-span-5 lg:min-h-[250px]">
+            <ScrollReveal variant="zoom-in" delay={340} className="lg:col-span-5">
+            <div className="group relative min-h-[220px] overflow-hidden rounded-2xl bg-neutral-200 shadow-sm lg:min-h-[250px]">
               <Image
                 src="/assets/pillar-packinghouse.webp"
                 alt="Pendopo dan Ruang Pertemuan"
@@ -193,6 +203,7 @@ export default function FasilitasAgrowisata() {
                 </h3>
               </div>
             </div>
+            </ScrollReveal>
           </div>
         </div>
       </div>

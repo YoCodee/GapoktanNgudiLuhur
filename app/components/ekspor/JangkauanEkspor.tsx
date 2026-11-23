@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollReveal from "../ScrollReveal";
 
 const activeMarkets = [
   { flag: "/assets/flags/cn.png", name: "China", desc: "±700 Ton (Jan–Okt 2025)" },
@@ -46,7 +47,7 @@ export default function JangkauanEkspor() {
 
         {/* Divider + stat row */}
         <div style={{ height: "1px", backgroundColor: "#e5e7eb", marginBottom: "32px" }} />
-        <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <ScrollReveal variant="pop-up" className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <span
               className="text-5xl font-extrabold"
@@ -75,13 +76,13 @@ export default function JangkauanEkspor() {
               Pengiriman rutin 30–50 ton per minggu ke China, Kamboja, Eropa, dan Timor Leste.
             </p>
           </div>
-        </div>
+        </ScrollReveal>
         <div style={{ height: "1px", backgroundColor: "#e5e7eb", marginBottom: "48px" }} />
 
         {/* Two column markets */}
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           {/* Active markets */}
-          <div>
+          <ScrollReveal variant="slide-left">
             <p
               className="mb-4 text-base font-bold"
               style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
@@ -113,10 +114,10 @@ export default function JangkauanEkspor() {
                 <div style={{ height: "1px", backgroundColor: "#e5e7eb" }} />
               </div>
             ))}
-          </div>
+          </ScrollReveal>
 
           {/* Target markets */}
-          <div>
+          <ScrollReveal variant="slide-right" delay={120}>
             <p
               className="mb-4 text-base font-bold"
               style={{ fontFamily: '"PlusJakartaSans", sans-serif', color: "#D4622E" }}
@@ -148,7 +149,7 @@ export default function JangkauanEkspor() {
                 <div style={{ height: "1px", backgroundColor: "#e5e7eb" }} />
               </div>
             ))}
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
