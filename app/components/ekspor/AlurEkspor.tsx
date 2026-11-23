@@ -6,25 +6,25 @@ const steps = [
     no: "01",
     title: "Collecting House",
     desc: "Hasil panen dari 5 Poktan binaan dikumpulkan ke pusat distribusi Gapoktan. Pencatatan berat dan asal kebun dilakukan secara sistematis sebelum masuk proses selanjutnya.",
-    image: "/assets/DSC04999.webp",
+    image: "/assets/ekspor/step-01-collecting.webp",
   },
   {
     no: "02",
     title: "Packing House",
     desc: "Buah dicuci bersih dan diseleksi berdasarkan standar berat dan tampilan fisik. Buah non-ekspor dipisahkan untuk pasar lokal atau produk olahan KWT.",
-    image: "/assets/pillar-packinghouse.webp",
+    image: "/assets/ekspor/step-02-packing.webp",
   },
   {
     no: "03",
     title: "Quality Control & Grading",
     desc: "Sortase kedua yang lebih ketat dengan penimbangan akurat. Setiap buah diperiksa ulang untuk memastikan konsistensi kualitas premium sesuai standar buyer internasional.",
-    image: "/assets/DSC05002.webp",
+    image: "/assets/ekspor/step-03-qc.webp",
   },
   {
     no: "04",
     title: "Stuffing & Shipping",
     desc: "Buah dimuat ke kontainer bersuhu terkontrol yang menjaga kesegaran selama pengiriman. Siap diberangkatkan menuju China, Eropa, Kamboja, dan pasar Asia lainnya.",
-    image: "/assets/section1.webp",
+    image: "/assets/ekspor/step-04-stuffing.webp",
   },
 ];
 
